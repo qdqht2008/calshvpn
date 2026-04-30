@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proxy SwitchyOmega 使用教程 - 浏览器代理扩展 | Clash节点</title>
+<meta name="description" content="Proxy SwitchyOmega 浏览器扩展使用教程，介绍如何控制哪些页面走直连，减少代理流量消耗，解决公司内网访问限制。">
+<meta name="keywords" content="SwitchyOmega, 浏览器代理, 直连, 代理扩展, Chrome代理, 网络优化">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://clash-node.github.io/switchyomega/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">本站分享安全老牌机场</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/switchyomega/" class="active">SwitchyOmega</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">Proxy SwitchyOmega 使用教程</h1>
+    </header>
+    <article class="article-content">
+
+      <h2>什么是 SwitchyOmega</h2>
+      <p>SwitchyOmega 是一款强大的浏览器代理管理扩展，支持 Chrome 和 Firefox。它可以帮助你轻松切换代理规则，控制哪些网站通过代理访问，哪些网站直接连接。</p>
+
+      <h2>为什么需要 SwitchyOmega</h2>
+      <div class="notice">
+        <p><strong>节省流量：</strong>只让需要访问的国外网站走代理，国内网站直连，显著减少代理流量消耗。</p>
+      </div>
+      <div class="notice">
+        <p><strong>解决内网限制：</strong>公司内网通常有访问限制，使用 SwitchyOmega 可以设置内网地址直连，代理只用于外部网络。</p>
+      </div>
+      <div class="notice-light">
+        <p><strong>提升速度：</strong>直连国内网站速度更快，无需绕道代理服务器。</p>
+      </div>
+
+      <h2>安装指南</h2>
+      <p><strong>Chrome 安装：</strong></p>
+      <p>访问 Chrome 应用商店，搜索 "SwitchyOmega"，点击安装即可。</p>
+      <p><strong>Firefox 安装：</strong></p>
+      <p>访问 Firefox 附加组件商店，搜索 "SwitchyOmega"，点击安装即可。</p>
+
+      <h2>基本配置步骤</h2>
+      <p><strong>第一步：创建代理配置文件</strong></p>
+      <ol>
+        <li>安装完成后，点击扩展图标，选择"选项"</li>
+        <li>点击"新建配置文件"</li>
+        <li>输入名称(如：Clash代理)，选择"代理配置文件"</li>
+        <li>配置代理服务器地址和端口(通常为 127.0.0.1:7890)</li>
+        <li>保存设置</li>
+      </ol>
+
+      <p><strong>第二步：创建自动切换规则</strong></p>
+      <ol>
+        <li>再次点击"新建配置文件"</li>
+        <li>输入名称(如：自动切换)，选择"自动切换配置文件"</li>
+        <li>在"默认代理"中选择刚才创建的代理配置</li>
+        <li>添加直连规则列表</li>
+      </ol>
+
+      <h2>推荐规则配置</h2>
+
+      <p><strong>直连规则（国内网站）</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>规则类型</th>
+            <th>示例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>域名通配符</td>
+            <td><code>*.baidu.com</code>, <code>*.taobao.com</code>, <code>*.qq.com</code></td>
+          </tr>
+          <tr>
+            <td>完整域名</td>
+            <td><code>163.com</code>, <code>alipay.com</code>, <code>weibo.com</code></td>
+          </tr>
+          <tr>
+            <td>内网地址</td>
+            <td><code>192.168.*.*</code>, <code>10.*.*.*</code>, <code>172.16.*.*</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>代理规则（国外网站）</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>规则类型</th>
+            <th>示例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>域名通配符</td>
+            <td><code>*.google.com</code>, <code>*.youtube.com</code>, <code>*.twitter.com</code></td>
+          </tr>
+          <tr>
+            <td>完整域名</td>
+            <td><code>netflix.com</code>, <code>openai.com</code>, <code>github.com</code></td>
+          </tr>
+          <tr>
+            <td>GFWList规则</td>
+            <td><code>【自动匹配】</code> - 内置的GFWList自动处理被墙网站</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>常见使用场景</h2>
+
+      <p><strong>场景一：内外网分离</strong></p>
+      <p>在公司网络中，设置内网IP段直连：</p>
+      <ul>
+        <li><code>192.168.0.0/16</code> - 局域网</li>
+        <li><code>10.0.0.0/8</code> - 私有网络</li>
+        <li><code>172.16.0.0/12</code> - 私有网络</li>
+        <li><code>*.company.com</code> - 公司内部网站</li>
+      </ul>
+
+      <p><strong>场景二：流媒体解锁</strong></p>
+      <p>需要代理才能访问的网站：</p>
+      <ul>
+        <li>Netflix、HBO、Disney+ 等流媒体</li>
+        <li>ChatGPT、Gemini 等AI服务</li>
+        <li>YouTube、Twitter、Facebook 等社交媒体</li>
+      </ul>
+
+      <p><strong>场景三：开发调试</strong></p>
+      <p>设置特定域名直连用于本地开发：</p>
+      <ul>
+        <li><code>localhost</code></li>
+        <li><code>127.0.0.1</code></li>
+        <li><code>*.local</code></li>
+      </ul>
+
+      <h2>快捷切换</h2>
+      <p>配置完成后，点击浏览器右上角的 SwitchyOmega 图标即可快速切换：</p>
+      <ul>
+        <li><strong>代理模式：</strong>所有流量走代理</li>
+        <li><strong>直连模式：</strong>所有流量直连</li>
+        <li><strong>自动切换：</strong>根据规则自动选择</li>
+      </ul>
+
+      <div class="notice">
+        <p><strong>提示：</strong>建议日常使用"自动切换"模式，系统会自动判断哪些网站需要代理，哪些直连。</p>
+      </div>
+
+    </article>
+
+    <!-- Waline 评论区 -->
+    <div id="waline"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+<script>
+Waline.init({
+  el: '#waline',
+  path: window.location.pathname,
+  serverURL: 'https://waline-seven-theta-30.vercel.app',
+  placeholder: '写下你的留言...',
+  requiredMeta: ['nick', 'comment'],
+  login: 'enable',
+});
+</script>
+</body>
+</html>
