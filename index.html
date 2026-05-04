@@ -20,58 +20,133 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Clash节点",
-  "description": "分享稳定可靠的Clash机场和客户端下载",
-  "url": "https://www.clashvpn.shop/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.clashvpn.shop/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
+<style>
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, rgba(224,122,95,0.08) 0%, rgba(129,178,154,0.08) 100%);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: var(--accent-tertiary);
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.category-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(224,122,95,0.15);
+  border-color: var(--accent-primary);
+}
+
+.category-card .icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.category-card h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--accent-tertiary);
+  margin: 0 0 12px;
+}
+
+.category-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
   }
 }
-</script>
+</style>
 </head>
 <body>
 <header class="header">
   <div class="container">
-    <div class="logo"><a href="/"><img src="img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
     <div class="brand">本站分享安全老牌机场<br></div>
   </div>
 </header>
-
 
 <section class="container container-page">
   <div class="pageside">
     <div class="pagemenus">
       <ul class="site-nav site-navbar">
         <li class="active"><a href="/">首页</a></li>
-        <li><a href="/ny/">奈云</a></li>
-        <li><a href="/sy/">瞬云</a></li>
-        <li><a href="/dageyun/">大哥云</a></li>
-        <li><a href="/jilianyun/">极连云</a></li>
-        <li><a href="/feimiaoyun/">肥猫云</a></li>
-        <li><a href="/guangnian/">光年梯</a></li>
-        <li><a href="/youxinyun/">优信云</a></li>
-        <li><a href="/feiniaoyun/">飞鸟云</a></li>
-        <li><a href="/yangfanyun/">扬帆云</a></li>
-        <li><a href="/longmiaoyun/">龙猫云</a></li>
-        <li><a href="/jinglingxueyuan/">精灵学院</a></li>
-        <li><a href="/switchyomega/">SwitchyOmega</a></li>
+        <li><a href="/download/">下载中心</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li><a href="/tutorial/">使用教程</a></li>
       </ul>
     </div>
   </div>
+
   <div class="content">
-    <header class="article-header">
-      <h1 class="article-title">Clash客户端大全 | 使用教程汇总</h1>
-    </header>
+    <div class="hero-section">
+      <h1>Clash 节点与客户端</h1>
+      <p>提供稳定的机场推荐、丰富的客户端下载和详细的使用教程</p>
+    </div>
+
+    <div class="category-grid">
+      <a href="/download/" class="category-card">
+        <div class="icon">📥</div>
+        <h2>客户端下载</h2>
+        <p>Clash Verge、FlClash、Clash for Windows 等多平台客户端下载</p>
+      </a>
+      <a href="/jichang/" class="category-card">
+        <div class="icon">✈️</div>
+        <h2>机场推荐</h2>
+        <p>精选优质机场，Trojan/V2Ray 协议，IPLC 专线支持</p>
+      </a>
+      <a href="/tutorial/" class="category-card">
+        <div class="icon">📖</div>
+        <h2>使用教程</h2>
+        <p>详细的配置教程，五分钟快速上手</p>
+      </a>
+    </div>
+
+    <div class="article-header">
+      <h1 class="article-title">Clash客户端大全</h1>
+    </div>
+
     <article class="article-content">
-      <p><img src="img/clash-300x300.png" alt="Clash" width="300" height="300"></p>
+      <p><img src="/img/clash-300x300.png" alt="Clash" width="300" height="300"></p>
 
       <h2>Clash简介</h2>
       <p>Clash 是一种开源的网络代理工具，同时也是 Clash Verge Rev、FlClash、Clash Nyanpasu、Mihomo Party、ClashMi、Clash for Windows、Clash Meta for Android、Clash for Android、ClashX Meta、ClashX、ClashX Pro、OpenClash等图形界面客户端的核心，用于帮助用户管理和配置网络代理服务。</p>
@@ -85,62 +160,31 @@
       </div>
 
       <h2>浏览器代理扩展 SwitchyOmega</h2>
-      <p>使用 <strong>Proxy SwitchyOmega</strong> 可以控制哪些页面走直连，减少代理流量消耗，还能解决公司内网访问限制。<a href="/switchyomega/">了解更多...</a></p>
+      <p>使用 <strong>Proxy SwitchyOmega</strong> 可以控制哪些页面走直连，减少代理流量消耗，还能解决公司内网访问限制。<a href="/tutorial/switchyomega/">了解更多...</a></p>
 
       <h2>Clash各版本客户端下载</h2>
+      <p><a href="/download/" class="btn btn-primary">查看全部下载 →</a></p>
 
       <p class="platform-title"><strong>Windows</strong></p>
       <table>
         <thead>
           <tr>
             <th>软件名称</th>
-            <th>软件下载</th>
+            <th>下载</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Clash Verge Rev</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/CVR/Clash.Verge_2.3.1_x64-setup.exe" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/CVR/Clash.Verge_2.3.1_x64-setup.exe" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.3.1/Clash.Verge_2.3.1_x64-setup.exe" class="btn-primary" target="_blank">官方GitHub下载</a></td>
+            <td><a href="/download/clash-verge/" class="btn-primary">教程&下载</a></td>
           </tr>
           <tr>
             <td><strong>FlClash</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/FlClash-0.8.86-windows-amd64-setup.exe" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/FlClash-0.8.86-windows-amd64-setup.exe" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/chen08209/FlClash/releases/download/v0.8.86/FlClash-0.8.86-windows-amd64-setup.exe" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Mihomo Party</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/mihomo-party-windows-1.7.6-x64-setup.exe" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/mihomo-party-windows-1.7.6-x64-setup.exe" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/mihomo-party-org/mihomo-party/releases/download/v1.7.6/mihomo-party-windows-1.7.6-x64-setup.exe" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Clash Nyanpasu</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/Clash.Nyanpasu_1.6.1_x64-setup.exe" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/Clash.Nyanpasu_1.6.1_x64-setup.exe" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v1.6.1/Clash.Nyanpasu_1.6.1_x64-setup.exe" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Karing</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/karing_1.2.0.810_windows_x64.exe" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/karing_1.2.0.810_windows_x64.exe" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/KaringX/karing/releases/download/v1.2.0.810/karing_1.2.0.810_windows_x64.exe" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>GUI.for.Clash</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/GUI.for.Clash-windows-amd64.zip" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/GUI.for.Clash-windows-amd64.zip" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.9.8-Alpha/GUI.for.Clash-windows-amd64.zip" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Clash Mi</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/clashmi_1.0.5.91_windows_x64.exe" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/clashmi_1.0.5.91_windows_x64.exe" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/KaringX/clashmi/releases/download/v1.0.5.91/clashmi_1.0.5.91_windows_x64.exe" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Pandora-Box</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/pandorabox_windows-amd64-app.zip" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/pandorabox_windows-amd64-app.zip" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/snakem982/Pandora-Box/releases/download/v1.0.14/windows-amd64-app.zip" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Clash Verge</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/Clash.Verge_1.3.8_x64_zh-CN.msi" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/Clash.Verge_1.3.8_x64_zh-CN.msi" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/zzzgydi/clash-verge/releases/download/v1.3.8/Clash.Verge_1.3.8_x64_zh-CN.msi" class="btn-primary" target="_blank">官方GitHub下载</a></td>
+            <td><a href="/download/flclash/" class="btn-primary">教程&下载</a></td>
           </tr>
           <tr>
             <td><strong>Clash for Windows</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/Clash.for.Windows-0.20.39-win-CN.7z" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/Clash.for.Windows-0.20.39-win-CN.7z" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/netboy1024/clash_for_windows/releases/download/v0.20.39/Clash.for.Windows.Setup.0.20.39.exe" class="btn-primary" target="_blank">备份GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>ClashN(已停更)</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/clashN.zip" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/clashN.zip" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/2dust/clashN/releases/download/2.22/clashN.zip" class="btn-primary" target="_blank">官方GitHub下载</a></td>
+            <td><a href="/download/clash-for-windows/" class="btn-primary">教程&下载</a></td>
           </tr>
         </tbody>
       </table>
@@ -150,49 +194,21 @@
         <thead>
           <tr>
             <th>软件名称</th>
-            <th>软件下载</th>
+            <th>下载</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Clash Verge Rev</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/CVR/Clash.Verge_2.3.1_aarch64.dmg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/CVR/Clash.Verge_2.3.1_aarch64.dmg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.3.1/Clash.Verge_2.3.1_aarch64.dmg" class="btn-primary" target="_blank">官方GitHub下载</a></td>
+            <td><a href="/download/clash-verge/" class="btn-primary">教程&下载</a></td>
           </tr>
           <tr>
             <td><strong>FlClash</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/FlClash-0.8.86-macos-arm64.dmg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/FlClash-0.8.86-macos-arm64.dmg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/chen08209/FlClash/releases/download/v0.8.86/FlClash-0.8.86-macos-arm64.dmg" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Mihomo Party</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/mihomo-party-macos-1.7.6-arm64.pkg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/mihomo-party-macos-1.7.6-arm64.pkg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/mihomo-party-org/mihomo-party/releases/download/v1.7.6/mihomo-party-macos-1.7.6-arm64.pkg" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Clash Nyanpasu</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/Clash.Nyanpasu_1.6.1_aarch64.dmg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/Clash.Nyanpasu_1.6.1_aarch64.dmg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v1.6.1/Clash.Nyanpasu_1.6.1_aarch64.dmg" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>GUI.for.Clash</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/GUI.for.Clash-darwin-arm64.zip" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/GUI.for.Clash-darwin-arm64.zip" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.9.8-Alpha/GUI.for.Clash-darwin-arm64.zip" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Pandora-Box</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/pandorabox_macos-arm64-dmg.zip" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/pandorabox_macos-arm64-dmg.zip" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/snakem982/Pandora-Box/releases/download/v1.0.14/macos-arm64-dmg.zip" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Clash for Windows</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/Clash.for.Windows-0.20.39-arm64.dmg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/Clash.for.Windows-0.20.39-arm64.dmg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/netboy1024/clash_for_windows/releases/download/v0.20.39/Clash.for.Windows-0.20.39-arm64.dmg" class="btn-primary" target="_blank">备份GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>ClashX</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/ClashX.dmg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/ClashX.dmg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/netboy1024/ClashX/releases/download/v1.118.0/ClashX.dmg" class="btn-primary" target="_blank">备份GitHub下载</a></td>
+            <td><a href="/download/flclash/" class="btn-primary">教程&下载</a></td>
           </tr>
           <tr>
             <td><strong>ClashX Pro</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/ClashXPro.dmg" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/ClashXPro.dmg" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/netboy1024/ClashX/releases/download/Prov1.97.0.4/ClashXPro.dmg" class="btn-primary" target="_blank">备份GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>ClashX Meta</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/ClashX.Meta.zip" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/ClashX.Meta.zip" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/MetaCubeX/ClashX.Meta/releases/download/v1.4.18/ClashX.Meta.zip" class="btn-primary" target="_blank">官方GitHub下载</a></td>
+            <td><a href="/download/clashx/" class="btn-primary">教程&下载</a></td>
           </tr>
         </tbody>
       </table>
@@ -202,97 +218,56 @@
         <thead>
           <tr>
             <th>软件名称</th>
-            <th>软件下载</th>
+            <th>下载</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Clash Meta for Android</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/cmfa-2.11.14-meta-universal-release.apk" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/cmfa-2.11.14-meta-universal-release.apk" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.14/cmfa-2.11.14-meta-universal-release.apk" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>FlClash</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/FlClash-0.8.86-android-arm64-v8a.apk" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/FlClash-0.8.86-android-arm64-v8a.apk" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/chen08209/FlClash/releases/download/v0.8.86/FlClash-0.8.86-android-arm64-v8a.apk" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Karing</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/karing_1.2.0.810_android_arm.apk" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/karing_1.2.0.810_android_arm.apk" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/KaringX/karing/releases/download/v1.2.0.810/karing_1.2.0.810_android_arm.apk" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>Clash Mi</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/clashmi_1.0.5.91_android_arm.apk" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/clashmi_1.0.5.91_android_arm.apk" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/KaringX/clashmi/releases/download/v1.0.5.91/clashmi_1.0.5.91_android_arm.apk" class="btn-primary" target="_blank">官方GitHub下载</a></td>
+            <td><a href="/download/clash-meta-for-android/" class="btn-primary">教程&下载</a></td>
           </tr>
           <tr>
             <td><strong>Clash for Android</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/cfa-2.5.12-premium-universal-release.apk" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/cfa-2.5.12-premium-universal-release.apk" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/netboy1024/clash_for_android/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk" class="btn-primary" target="_blank">备份GitHub下载</a></td>
+            <td><a href="/download/clash-for-android/" class="btn-primary">教程&下载</a></td>
+          </tr>
+          <tr>
+            <td><strong>FlClash</strong></td>
+            <td><a href="/download/flclash/" class="btn-primary">教程&下载</a></td>
           </tr>
         </tbody>
       </table>
 
-      <p class="platform-title"><strong>苹果iOS</strong></p>
+      <p class="platform-title"><strong>iOS苹果手机</strong></p>
       <table>
         <thead>
           <tr>
             <th>软件名称</th>
-            <th>下载地址</th>
+            <th>下载</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Karing</strong></td>
-            <td><a href="https://apps.apple.com/app/apple-store/id6472431552" class="btn-primary" target="_blank">苹果App Store</a> <a href="https://testflight.apple.com/join/RLU59OsJ" class="btn-primary" target="_blank">TestFlight</a></td>
+            <td><strong>Potatos</strong></td>
+            <td><a href="/download/potatso/" class="btn-primary">教程&下载</a></td>
           </tr>
           <tr>
             <td><strong>Clash Mi</strong></td>
-            <td><a href="https://apps.apple.com/app/apple-store/id6744321968" class="btn-primary" target="_blank">苹果App Store</a></td>
-          </tr>
-          <tr>
-            <td><strong>Shadowrocket</strong></td>
-            <td><a href="https://apps.apple.com/app/apple-store/id932747118" class="btn-primary" target="_blank">苹果App Store</a></td>
-          </tr>
-          <tr>
-            <td><strong>Quantumult X</strong></td>
-            <td><a href="https://apps.apple.com/app/apple-store/id1443988620" class="btn-primary" target="_blank">苹果App Store</a></td>
-          </tr>
-          <tr>
-            <td><strong>Surge</strong></td>
-            <td><a href="https://apps.apple.com/app/apple-store/id1442620678" class="btn-primary" target="_blank">苹果App Store</a></td>
-          </tr>
-          <tr>
-            <td><strong>Stash</strong></td>
-            <td><a href="https://apps.apple.com/app/apple-store/id1508712998" class="btn-primary" target="_blank">苹果App Store</a></td>
+            <td><a href="https://clashmi.com/download" class="btn-primary" target="_blank">App Store</a></td>
           </tr>
         </tbody>
       </table>
-
-      <p class="platform-title"><strong>华为鸿蒙HarmonyOS NEXT</strong></p>
-      <table>
-        <thead>
-          <tr>
-            <th>软件名称</th>
-            <th>软件下载</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>ClashBox</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/ClashBox-1.4.7.hap" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/ClashBox-1.4.7.hap" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/xiaobaigroup/ClashBox/releases/download/1.4.7/ClashBox-1.4.7.hap" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-          <tr>
-            <td><strong>ClashNEXT</strong></td>
-            <td><a href="https://dl.cloudnode.vip/soft/ClashNEXT-LTS-1.5.1.hap" class="btn-primary" target="_blank">🚀高速下载</a> <a href="https://download.cloudnode.vip/soft/ClashNEXT-LTS-1.5.1.hap" class="btn-primary" target="_blank">备用下载</a> <a href="https://github.com/xiaobaigroup/ClashBox/releases/download/1.5.1/ClashNEXT-LTS-1.5.1.hap" class="btn-primary" target="_blank">官方GitHub下载</a></td>
-          </tr>
-        </tbody>
-      </table>
-
-     
-      
     </article>
 
     <!-- Waline 评论区 -->
     <div id="waline"></div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2024-2026 Clash节点. All rights reserved.</p>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
