@@ -1,171 +1,111 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Clash for Windows 下载与配置指南 | Clash下载站</title>
-    <meta name="description" content="获取 Clash for Windows 中文汉化版下载。提供详细的配置教程、免费节点分享。">
-    <meta name="generator" content="VitePress v2.0.0-alpha.17">
-    <link rel="preload stylesheet" href="/assets/style.CY5lGvIn.css" as="style">
-    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
-    
-    <script type="module" src="/assets/app.CfAv_sFb.js"></script>
-    <link rel="preload" href="/assets/inter-roman-latin.Cy4MYw_J.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="modulepreload" href="/assets/chunks/theme.DKadbjZy.js">
-    <link rel="modulepreload" href="/assets/chunks/framework.Dpc0wyhY.js">
-    <link rel="modulepreload" href="/assets/clash-for-windows.md.C0I6loKE.lean.js">
-    <link rel="icon" href="/favicon.png">
-    <script>(function(){var a="clash.download",o=window.location.hostname;o!==a&&o!=="localhost"&&o!=="127.0.0.1"&&window.location.replace("https://"+a+window.location.pathname+window.location.search)})();</script>
-    <meta name="keywords" content="Clash for Windows, CFW, Windows代理">
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8P50ZDTPVP");</script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8P50ZDTPVP"></script>
-    <script>(function(e,r,t,i,m,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=r.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+m,s=r.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","uldrsffmfu");</script>
-    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
-    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
-    <link rel="canonical" href="https://clash.download/clash-for-windows">
-    <script type="application/ld+json" innerHTML="{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;WebPage&quot;,
-  &quot;name&quot;: &quot;Clash for Windows 下载与教程&quot;,
-  &quot;url&quot;: &quot;https://clash.download/clash-for-windows&quot;,
-  &quot;image&quot;: &quot;https://image.clash.download/clash-for-windows-教程-效果展示.webp&quot;,
-  &quot;author&quot;: {
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;Clash.Download&quot;
-  },
-  &quot;publisher&quot;: {
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;Clash.Download&quot;,
-    &quot;logo&quot;: {
-      &quot;@type&quot;: &quot;ImageObject&quot;,
-      &quot;url&quot;: &quot;https://image.clash.download/clash-download.webp&quot;
-    }
-  }
-}
-"></script>
-    <meta property="og:image" content="https://image.clash.download/clash-for-windows-教程-效果展示.webp">
-    <meta name="twitter:image" content="https://image.clash.download/clash-for-windows-教程-效果展示.webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json" innerHTML="{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;FAQPage&quot;,
-  &quot;mainEntity&quot;: [
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;Clash for Windows (CFW) 还在更新吗？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;不，Clash for Windows 的原作者已于2023年停止更新此项目。本站提供的 v0.20.39 是其在官方 GitHub 仓库发布的最后一个稳定版本。虽然它目前仍可使用，但不会再有新功能添加或针对新出现问题的修复。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;Clash for Windows (CFW) 现在用还安全吗？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;从官方渠道（如本站提供的 Github 链接）下载的 v0.20.39 版本，软件本身在停止更新前是经过广泛验证的。但由于不再更新，如果其依赖的组件未来爆出新的安全漏洞，将无法得到修补。此外，代理服务的安全性更多取决于您所使用的节点订阅服务商是否可靠。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;我应该继续使用 Clash for Windows 吗？有哪些替代品？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;老用户：如果您已习惯 Clash for Windows 且目前使用一切正常，可以继续使用。\n新用户或追求新功能的用户：更推荐使用仍在积极维护和更新的客户端，例如 Clash Verge 或 FlClash。这些客户端基于较新的 Clash Meta 内核，支持更多现代代理协议，功能也更丰富。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;Clash for Windows (CFW) 和 Clash Verge 有什么主要区别？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;1. 内核不同：Clash for Windows 基于较旧的 Clash 核心；而 Clash Verge 基于更新、功能更强大的 Clash Meta (Mihomo) 内核。\n2. 更新状态：Clash for Windows 已停止更新；Clash Verge 持续活跃更新。\n3. 功能特性：得益于 Meta 内核，Clash Verge 支持更多高级功能和更新的代理协议，性能和稳定性方面也可能有优势。\n4. 跨平台：Clash Verge 也有 Mac 和 Linux 版本，而 FlClash 更是支持包括 Android 在内的四大平台。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;为什么我安装 Clash for Windows 后提示“Windows SmartScreen 阻止了无法识别的应用启动”？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;这是 Windows 的一种安全机制，因为 Clash for Windows 的安装包可能没有被广泛数字签名。您可以点击提示框中的“更多信息”，然后选择“仍要运行”即可继续安装。请确保您的安装包是从可信来源（如官方 Github 或本站）下载的。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;为什么打开 Clash for Windows 后界面是英文的？怎么设置中文？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;本站提供的版本是自带简体中文的。如果您打开后是英文界面，通常是因为您的操作系统语言设置影响了软件的默认语言。\n您可以尝试在软件的 Settings (设置) -&gt; General (常规) 选项卡下找到 Language (语言) 选项，手动选择 简体中文，然后重启软件。如果初次启动没有找到语言切换选项，通常它会根据系统语言自动选择，确保您的 Windows 系统语言首选项包含中文。&quot;
-      }
-    }
-  ]
-}
-"></script>
-    <script type="application/ld+json" innerHTML="{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;HowTo&quot;,
-  &quot;name&quot;: &quot;Clash for Windows 配置使用教程：五分钟上手指南&quot;,
-  &quot;description&quot;: &quot;本教程将指导您如何在 Windows 或 Mac 系统上下载、安装 Clash for Windows (v0.20.39)，导入节点订阅配置，并开启系统代理，实现网络访问。五分钟包教包会！&quot;,
-  &quot;totalTime&quot;: &quot;PT5M&quot;,
-  &quot;estimatedCost&quot;: { &quot;@type&quot;: &quot;MonetaryAmount&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;value&quot;: &quot;0&quot; },
-  &quot;supply&quot;: [
-    { &quot;@type&quot;: &quot;HowToSupply&quot;, &quot;name&quot;: &quot;Clash for Windows 软件 (v0.20.39)&quot; },
-    { &quot;@type&quot;: &quot;HowToSupply&quot;, &quot;name&quot;: &quot;Clash 节点订阅地址&quot; }
-  ],
-  &quot;tool&quot;: [
-    { &quot;@type&quot;: &quot;HowToTool&quot;, &quot;name&quot;: &quot;电脑 (Windows 或 Mac)&quot; }
-  ],
-  &quot;step&quot;: [
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第一步：下载安装并启动 Clash for Windows&quot;,
-      &quot;text&quot;: &quot;访问 Clash for Windows 官方 Github 或本站提供的加速链接，下载对应您操作系统（Windows .exe, Mac .dmg）的 v0.20.39 安装包。下载完成后，运行安装程序并按照提示完成安装。启动 Clash for Windows 应用程序。&quot;,
-      &quot;url&quot;: &quot;#第一步下载安装并启动&quot;,
-      &quot;image&quot;: &quot;https://image.clash.download/clash-for-windows-教程-效果展示.webp&quot;
-    },
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第二步：获取 Clash 节点订阅&quot;,
-      &quot;text&quot;: &quot;Clash for Windows 本身是代理工具，需要配合 Clash 节点订阅才能连接网络。如果您还没有 Clash 订阅地址，可以从订阅服务商处购买或寻找免费试用节点。确保您已复制有效的订阅链接。&quot;,
-      &quot;url&quot;: &quot;#clash节点&quot;,
-      &quot;image&quot;: &quot;https://image.clash.download/clash-for-windows-教程-导入订阅.webp&quot;
-    },
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第三步：导入订阅到 Clash for Windows&quot;,
-      &quot;text&quot;: &quot;将获取到的 Clash 订阅链接导入到 Clash for Windows 中。具体操作分为一键导入和手动导入两种方式。&quot;,
-      &quot;url&quot;: &quot;#第三步导入订阅到clash&quot;,
-      &quot;itemListElement&quot;: [
-        {
-          &quot;@type&quot;: &quot;HowToDirection&quot;,
-          &quot;name&quot;: &quot;一键导入&quot;,
-          &quot;text&quot;: &quot;如果您的订阅服务商支持一键导入，通常会提供一个特定的按钮或链接。点击后，Clash for Windows 会自动获取并加载配置文件。&quot;,
-          &quot;image&quot;: &quot;https://image.clash.download/clash-for-windows-教程-导入配置.webp&quot;
-        },
-        {
-          &quot;@type&quot;: &quot;HowToDirection&quot;,
-          &quot;name&quot;: &quot;手动下载配置&quot;,
-          &quot;text&quot;: &quot;复制您的 Clash 订阅链接。打开 Clash for Windows，在“Profiles”(配置文件) 页面，将订阅链接粘贴到顶部的输入框中，然后点击“Download”(下载)。Clash for Windows 会拉取配置文件并显示在列表中。选中刚导入的配置文件使其生效。&quot;,
-          &quot;image&quot;: &quot;https://image.clash.download/clash-for-windows-教程-下载配置.webp&quot;
-        }
-      ]
-    },
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第四步：打开系统代理&quot;,
-      &quot;text&quot;: &quot;导航到 Clash for Windows 的“General”(常规) 页面。找到“System Proxy”(系统代理) 选项，并将其开关拨到开启状态。确保开关保持绿色或表示已激活的状态。此时，您的设备网络流量将通过 Clash for Windows 进行代理。&quot;,
-      &quot;url&quot;: &quot;#第四步打开系统代理&quot;,
-      &quot;image&quot;: &quot;https://image.clash.download/clash-for-windows-配置教程-系统代理.webp&quot;,
-      &quot;result&quot;: &quot;成功开启系统代理后，您应该已经可以访问外部网络。可以尝试打开 Google 等网站进行测试。&quot;
-    }
-  ]
-}
-"></script>
-    <link rel="canonical" href="https://clash.download/clash-for-windows">
-  </head>
-  <body>
-    <div id="app"><div class="Layout" data-v-c109192d><!--[--><!--]--><!--[--><span tabindex="-1" data-v-10d4d845></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-10d4d845>Skip to content</a><!--]--><!----><header class="VPNav" data-v-c109192d data-v-d5bf7c8e><div class="VPNavBar top" data-v-d5bf7c8e data-v-cc1d9f2e><div class="wrapper" data-v-cc1d9f2e><div class="container" data-v-cc1d9f2e><div class="title" data-v-cc1d9f2e><div class="VPNavBarTitle" data-v-cc1d9f2e data-v-d4488dd0><a class="title" href="/" data-v-d4488dd0><!--[--><!--]--><!--[--><img class="VPImage logo" src="/favicon.png" alt data-v-ab19afbb><!--]--><span data-v-d4488dd0>Clash下载站</span><!--[--><!--]--></a></div></div><div class="content" data-v-cc1d9f2e><div class="content-body" data-v-cc1d9f2e><!--[--><!--]--><div class="VPNavBarSearch search" data-v-cc1d9f2e data-v-bdd98725><!--[--><button type="button" class="VPNavBarSearchButton" aria-label="搜索文档" aria-keyshortcuts="/ control+k meta+k" data-v-bdd98725 data-v-69351052><span class="vpi-search" aria-hidden="true" data-v-69351052></span><span class="text" data-v-69351052>搜索文档</span><span class="keys" aria-hidden="true" data-v-69351052><kbd class="key-cmd" data-v-69351052>⌘</kbd><kbd class="key-ctrl" data-v-69351052>Ctrl</kbd><kbd data-v-69351052>K</kbd></span></button><!----><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-cc1d9f2e data-v-020be4db><span id="main-nav-aria-label" class="visually-hidden" data-v-020be4db> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/downloads" tabindex="0" data-v-020be4db data-v-727dd4ba><!--[--><span data-v-727dd4ba>Clash 下载中心</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup active" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>Windows 电脑</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-verge" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Verge</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link active" href="/clash-for-windows" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash for Windows</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>Android 安卓</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-meta-for-android" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Meta for Android</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-for-android" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash for Android</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup active" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>macOS 苹果电脑</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-verge" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Verge</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clashx" data-v-6e27a530><!--[--><span data-v-6e27a530>ClashX Pro</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link active" href="/clash-for-windows" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash for Windows</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>iOS 苹果手机</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link vp-external-link-icon" href="https://clashmi.com/download" target="_blank" rel="noreferrer" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Mi</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/potatso" data-v-6e27a530><!--[--><span data-v-6e27a530>Potatos</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>Linux</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-verge" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Verge</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/jichang" tabindex="0" data-v-020be4db data-v-727dd4ba><!--[--><span data-v-727dd4ba>Clash 订阅推荐</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-cc1d9f2e data-v-3f90c1a5><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-3f90c1a5 data-v-be9742d9 data-v-b4ccac88><span class="check" data-v-b4ccac88><span class="icon" data-v-b4ccac88><!--[--><span class="vpi-sun sun" data-v-be9742d9></span><span class="vpi-moon moon" data-v-be9742d9></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-cc1d9f2e data-v-ef6192dc data-v-a1a7286e><!--[--><a class="VPSocialLink no-icon" href="https://github.com/clash-download/clash" aria-label="github" target="_blank" rel="me noopener nofollow" data-v-a1a7286e data-v-32d78712><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-cc1d9f2e data-v-2a0cad91 data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-d8fae6e2><span class="vpi-more-horizontal icon" data-v-d8fae6e2></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><!----><!--[--><!--[--><!----><div class="group" data-v-2a0cad91><div class="item appearance" data-v-2a0cad91><p class="label" data-v-2a0cad91>Appearance</p><div class="appearance-action" data-v-2a0cad91><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-2a0cad91 data-v-be9742d9 data-v-b4ccac88><span class="check" data-v-b4ccac88><span class="icon" data-v-b4ccac88><!--[--><span class="vpi-sun sun" data-v-be9742d9></span><span class="vpi-moon moon" data-v-be9742d9></span><!--]--></span></span></button></div></div></div><div class="group" data-v-2a0cad91><div class="item social-links" data-v-2a0cad91><div class="VPSocialLinks social-links-list" data-v-2a0cad91 data-v-a1a7286e><!--[--><a class="VPSocialLink no-icon" href="https://github.com/clash-download/clash" aria-label="github" target="_blank" rel="me noopener nofollow" data-v-a1a7286e data-v-32d78712><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-cc1d9f2e data-v-6bee1efd><span class="container" data-v-6bee1efd><span class="top" data-v-6bee1efd></span><span class="middle" data-v-6bee1efd></span><span class="bottom" data-v-6bee1efd></span></span></button></div></div></div></div><div class="divider" data-v-cc1d9f2e><div class="divider-line" data-v-cc1d9f2e></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-c109192d data-v-73add737><div class="container" data-v-73add737><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-73add737 data-v-e28a51a6><button data-v-e28a51a6>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-c109192d data-v-529a4999><div class="VPDoc has-aside" data-v-529a4999 data-v-d668f7cc><!--[--><!--]--><div class="container" data-v-d668f7cc><div class="aside" data-v-d668f7cc><div class="aside-curtain" data-v-d668f7cc></div><div class="aside-container" data-v-d668f7cc><div class="aside-content" data-v-d668f7cc><div class="VPDocAside" data-v-d668f7cc data-v-cb998dce><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-cb998dce data-v-c8b19031><div class="content" data-v-c8b19031><div class="outline-marker" data-v-c8b19031></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-c8b19031>本页目录</div><ul class="VPDocOutlineItem root" data-v-c8b19031 data-v-63c57e50><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-cb998dce></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-d668f7cc><div class="content-container" data-v-d668f7cc><!--[--><!--]--><main class="main" data-v-d668f7cc><div style="position:relative;" class="vp-doc _clash-for-windows" data-v-d668f7cc><div><h1 id="clash-for-windows-中文版下载与配置指南" tabindex="-1">Clash for Windows 中文版下载与配置指南 <a class="header-anchor" href="#clash-for-windows-中文版下载与配置指南" aria-label="Permalink to “Clash for Windows 中文版下载与配置指南”">​</a></h1><p>Clash for Windows v0.20.39 是这款经典代理软件在其 GitHub 仓库发布的最后一个版本，已中文汉化。您下载安装后，只需<a href="#clash节点">导入 Clash 订阅地址</a>，打开系统代理，即可访问网络。</p><h2 id="downloads" tabindex="-1">Clash for Windows下载 <a class="header-anchor" href="#downloads" aria-label="Permalink to “Clash for Windows下载”">​</a></h2><table tabindex="0"><thead><tr><th style="text-align:left;">系统</th><th style="text-align:center;">Github 加速</th><th style="text-align:center;">Github 直连</th></tr></thead><tbody><tr><td style="text-align:left;">Windows</td><td style="text-align:center;"><a href="https://github.clash.download/clash-download/Clash-for-Windows/releases/download/v0.20.39/clash-for-windows.exe" target="_blank" rel="noreferrer">推荐下载</a></td><td style="text-align:center;"><a href="https://github.com/clash-download/Clash-for-Windows/releases/download/v0.20.39/clash-for-windows.exe" target="_blank" rel="noreferrer nofollow">下载</a></td></tr><tr><td style="text-align:left;">Mac</td><td style="text-align:center;"><a href="https://github.clash.download/clash-download/Clash-for-Windows/releases/download/v0.20.39/clash-for-windows.dmg" target="_blank" rel="noreferrer">推荐下载</a></td><td style="text-align:center;"><a href="https://github.com/clash-download/Clash-for-Windows/releases/download/v0.20.39/clash-for-windows.dmg" target="_blank" rel="noreferrer nofollow">下载</a></td></tr></tbody></table><h2 id="配置指南" tabindex="-1">配置指南 <a class="header-anchor" href="#配置指南" aria-label="Permalink to “配置指南”">​</a></h2><p>没用过或者不知道 Clash for Windows 怎么用的朋友们，跟着这篇图文教程，哪怕你是新手，也能五分钟快速上手！就像这样👇</p><p><img src="https://image.clash.download/clash-for-windows-%E6%95%99%E7%A8%8B-%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.webp" alt="clash-for-windows-教程-效果展示"></p><h3 id="第一步下载安装并启动" tabindex="-1">第一步：下载 安装并启动 <a class="header-anchor" href="#第一步下载安装并启动" aria-label="Permalink to “第一步：下载 安装并启动”">​</a></h3><h3 id="clash节点" tabindex="-1">第二步：获取免费试用节点 <a class="header-anchor" href="#clash节点" aria-label="Permalink to “第二步：获取免费试用节点”">​</a></h3><p>软件本身是完全免费的，但是都需要添加节点才能使用。如果您还没有节点订阅地址，<a href="https://qiaomimi.cloud/#/register?code=clash" rel="sponsored nofollow" target="_blank">可以点此免费试用</a>。如已有可跳过这一步</p><p><img src="https://image.clash.download/clash-for-windows-%E6%95%99%E7%A8%8B-%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85.webp" alt="clash-for-windows-教程-获取订阅地址"></p><h3 id="第三步导入订阅到clash" tabindex="-1">第三步：导入订阅到 Clash <a class="header-anchor" href="#第三步导入订阅到clash" aria-label="Permalink to “第三步：导入订阅到 Clash”">​</a></h3><h4 id="一键导入配置" tabindex="-1">自动导入配置 <a class="header-anchor" href="#一键导入配置" aria-label="Permalink to “自动导入配置”">​</a></h4><p>如上图所示，点击<code>Clash 软件图标</code>，稍等几秒，即可自动导入配置文件，效果如下图所示:</p><p><img src="https://image.clash.download/clash-for-windows-%E6%95%99%E7%A8%8B-%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE.webp" alt="clash-for-windows-教程-一键导入订阅配置"></p><h4 id="手动下载配置" tabindex="-1">手动下载配置 <a class="header-anchor" href="#手动下载配置" aria-label="Permalink to “手动下载配置”">​</a></h4><p>遇到自动导入下载配置失败或无响应，您可先点击<code>首页</code>的<code>导入订阅</code>，再点击<code>复制订阅地址</code>，然后如下图所示：粘贴到订阅地址的输入栏，再点击<code>下载</code>按钮。</p><p><img src="https://image.clash.download/clash-for-windows-%E6%95%99%E7%A8%8B-%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE.webp" alt="clash-for-windows-教程-手动下载订阅配置"></p><h3 id="第四步打开系统代理" tabindex="-1">第四步：打开系统代理❗ <a class="header-anchor" href="#第四步打开系统代理" aria-label="Permalink to “第四步：打开系统代理❗”">​</a></h3><p><img src="https://image.clash.download/clash-for-windows-%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B-%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86.webp" alt="clash-for-windows-配置教程-系统代理"></p><p>特别注意：一定要打开<code>系统代理</code>，才能使流量通过 Clash 代理❗新手们前往不要忘记~</p><p>正常情况下，您此时已经可以访问网络，可直接打开 Google ！打不开也不要慌，您只需要仔细核对上述步骤和教程中的示意图是否一致，并查看常见问题解答，99%+情况都能顺利联网，加油！</p><h2 id="常见问题" tabindex="-1">常见问题 <a class="header-anchor" href="#常见问题" aria-label="Permalink to “常见问题”">​</a></h2><h3 id="cfw-还在更新吗" tabindex="-1">CFW 还在更新吗？ <a class="header-anchor" href="#cfw-还在更新吗" aria-label="Permalink to “CFW 还在更新吗？”">​</a></h3><p>答：不，Clash for Windows 的原作者已于2023年停止更新此项目。本站提供的 v0.20.39 是其在官方 GitHub 仓库发布的最后一个稳定版本。虽然它目前仍可使用，但不会再有新功能添加或针对新出现问题的修复。</p><h3 id="cfw-现在用还安全吗" tabindex="-1">CFW 现在用还安全吗？ <a class="header-anchor" href="#cfw-现在用还安全吗" aria-label="Permalink to “CFW 现在用还安全吗？”">​</a></h3><p>从官方渠道（如本站提供的 Github 链接）下载的 v0.20.39 版本，软件本身在停止更新前是经过广泛验证的。但由于不再更新，如果其依赖的组件未来爆出新的安全漏洞，将无法得到修补。此外，代理服务的安全性更多取决于您所使用的节点订阅服务商是否可靠。</p><h3 id="我应该继续使用吗-有哪些替代品" tabindex="-1">我应该继续使用吗？有哪些替代品？ <a class="header-anchor" href="#我应该继续使用吗-有哪些替代品" aria-label="Permalink to “我应该继续使用吗？有哪些替代品？”">​</a></h3><ul><li><strong>老用户</strong>：如果您已习惯 Clash for Windows 且目前使用一切正常，可以继续使用。</li><li><strong>新用户或追求新功能的用户</strong>：更推荐使用仍在积极维护和更新的客户端，例如 <a href="/clash-verge">Clash Verge</a> 或 <a href="/flclash">FlClash</a>。这些客户端基于较新的 Clash Meta 内核，支持更多现代代理协议，功能也更丰富。</li></ul><h3 id="cfw-和-clash-verge-有什么主要区别" tabindex="-1">CFW 和 Clash Verge 有什么主要区别？ <a class="header-anchor" href="#cfw-和-clash-verge-有什么主要区别" aria-label="Permalink to “CFW 和 Clash Verge 有什么主要区别？”">​</a></h3><ol><li><strong>内核不同</strong>：Clash for Windows 基于较旧的 Clash 核心；而 Clash Verge 基于更新、功能更强大的 Clash Meta (Mihomo) 内核。</li><li><strong>更新状态</strong>：Clash for Windows 已停止更新；Clash Verge 持续活跃更新。</li><li><strong>功能特性</strong>：得益于 Meta 内核，Clash Verge 支持更多高级功能和更新的代理协议，性能和稳定性方面也可能有优势。</li><li><strong>跨平台</strong>：<a href="/clash-verge">Clash Verge</a> 也有 Mac 和 Linux 版本，而 <a href="/flclash">FlClash</a> 更是支持包括 Android 在内的四大平台。</li></ol><h3 id="为什么我安装后提示-windows-smartscreen-阻止了无法识别的应用启动" tabindex="-1">为什么我安装后提示“Windows SmartScreen 阻止了无法识别的应用启动”？ <a class="header-anchor" href="#为什么我安装后提示-windows-smartscreen-阻止了无法识别的应用启动" aria-label="Permalink to “为什么我安装后提示“Windows SmartScreen 阻止了无法识别的应用启动”？”">​</a></h3><p>这是 Windows 的一种安全机制，因为 Clash for Windows 的安装包可能没有被广泛数字签名。您可以点击提示框中的“更多信息”，然后选择“仍要运行”即可继续安装。请确保您的安装包是从可信来源（如官方 Github 或本站）下载的。</p><h3 id="为什么打开软件后界面是英文的-怎么设置中文" tabindex="-1">为什么打开软件后界面是英文的？怎么设置中文？ <a class="header-anchor" href="#为什么打开软件后界面是英文的-怎么设置中文" aria-label="Permalink to “为什么打开软件后界面是英文的？怎么设置中文？”">​</a></h3><p>本站提供的版本是自带简体中文的。如果您打开后是英文界面，通常是因为您的操作系统语言设置影响了软件的默认语言。 您可以尝试在软件的 <code>Settings</code> (设置) -&gt; <code>General</code> (常规) 选项卡下找到 <code>Language</code> (语言) 选项，手动选择 <code>简体中文</code>，然后重启软件。如果初次启动没有找到语言切换选项，通常它会根据系统语言自动选择，确保您的 Windows 系统语言首选项包含中文。</p><h2 id="遇到问题" tabindex="-1">遇到问题？ <a class="header-anchor" href="#遇到问题" aria-label="Permalink to “遇到问题？”">​</a></h2><p>更多关于下载配置报错、连不上外网、网络故障等常见问题，我们已在下载中心进行了统一解答：</p><p>➡️ <strong><a href="/downloads#clash-faq">查看 Clash 使用常见问题解答</a></strong></p><p><img src="https://image.clash.download/favicon.png" alt="clash for windows logo"></p></div></div></main><footer class="VPDocFooter" data-v-d668f7cc data-v-1bcd8184><!--[--><!--]--><div class="edit-info" data-v-1bcd8184><!----><div class="last-updated" data-v-1bcd8184><p class="VPLastUpdated" data-v-1bcd8184 data-v-73dafb42>最后更新于: <time datetime="2025-12-14T11:56:33.000Z" data-v-73dafb42></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-c109192d data-v-5b9946f5><div class="container" data-v-5b9946f5><!----><p class="copyright" data-v-5b9946f5>版权所有 © 2024-2026 Clash下载站,保留所有权利。</p></div></footer><!--[--><!--]--></div></div>
-    <script>window.__VP_HASH_MAP__=JSON.parse("{\"clash-for-android.md\":\"ChOE8hKU\",\"clash-for-windows.md\":\"C0I6loKE\",\"clash-meta-for-android.md\":\"BCr5mHrZ\",\"clash-verge.md\":\"1ZO6qNrr\",\"clashx.md\":\"Bm8Kc3FJ\",\"downloads.md\":\"_0N0nCJ9\",\"flclash.md\":\"B2JOd-y1\",\"index.md\":\"YMalbyeu\",\"jichang.md\":\"BZ0l2yUQ\",\"potatso.md\":\"w3fRqO27\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"Clash下载站\",\"description\":\"提供Clash for Windows, ClashX (macOS),Clash for Android等各平台最新版Clash软件下载,以及详细的安装配置教程,免费节点和常见问题解答,帮助新手用户快速上手。\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":\"/favicon.png\",\"nav\":[{\"text\":\"Clash 下载中心\",\"link\":\"/downloads\"},{\"text\":\"Windows 电脑\",\"items\":[{\"text\":\"Clash Verge\",\"link\":\"/clash-verge\"},{\"text\":\"Clash for Windows\",\"link\":\"/clash-for-windows\"},{\"text\":\"FlClash\",\"link\":\"/flclash\"}]},{\"text\":\"Android 安卓\",\"items\":[{\"text\":\"Clash Meta for Android\",\"link\":\"/clash-meta-for-android\"},{\"text\":\"Clash for Android\",\"link\":\"/clash-for-android\"},{\"text\":\"FlClash\",\"link\":\"/flclash\"}]},{\"text\":\"macOS 苹果电脑\",\"items\":[{\"text\":\"Clash Verge\",\"link\":\"/clash-verge\"},{\"text\":\"FlClash\",\"link\":\"/flclash\"},{\"text\":\"ClashX Pro\",\"link\":\"/clashx\"},{\"text\":\"Clash for Windows\",\"link\":\"/clash-for-windows\"}]},{\"text\":\"iOS 苹果手机\",\"items\":[{\"text\":\"Clash Mi\",\"link\":\"https://clashmi.com/download\"},{\"text\":\"Potatos\",\"link\":\"/potatso\"}]},{\"text\":\"Linux\",\"items\":[{\"text\":\"FlClash\",\"link\":\"/flclash\"},{\"text\":\"Clash Verge\",\"link\":\"/clash-verge\"}]},{\"text\":\"Clash 订阅推荐\",\"link\":\"/jichang\"}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/clash-download/clash\"}],\"footer\":{\"copyright\":\"版权所有 © 2024-2026 Clash下载站,保留所有权利。\"},\"search\":{\"provider\":\"local\",\"options\":{\"translations\":{\"button\":{\"buttonText\":\"搜索文档\",\"buttonAriaLabel\":\"搜索文档\"},\"modal\":{\"noResultsText\":\"无法找到相关结果\",\"resetButtonTitle\":\"清除查询条件\",\"footer\":{\"selectText\":\"选择\",\"navigateText\":\"切换\"}}}}},\"docFooter\":{\"prev\":\"上一页\",\"next\":\"下一页\"},\"outline\":{\"label\":\"本页目录\",\"level\":[2,4]},\"lastUpdated\":{\"text\":\"最后更新于\",\"formatOptions\":{\"dateStyle\":\"short\",\"timeStyle\":\"medium\"}},\"notFound\":{\"title\":\"页面未找到\",\"quote\":\"我的朋友请不要慌，我们知道回家的路。\",\"linkText\":\"返回首页\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true,\"additionalConfig\":{}}");</script>
-    
-  </body>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clash for Windows 下载与配置教程 | Clash节点</title>
+<meta name="description" content="Clash for Windows 是经典的 Windows 代理客户端，提供详细配置教程。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/download/clash-for-windows/">
+<meta property="og:title" content="Clash for Windows 下载与配置教程">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
+<style>
+.step-section { margin: 30px 0; padding: 25px; background: var(--bg-secondary); border-radius: 16px; }
+.step-section h3 { color: var(--accent-tertiary); margin-bottom: 15px; }
+.faq-item { margin: 20px 0; padding: 20px; background: var(--gradient-glow); border-radius: 12px; }
+.faq-item h4 { color: var(--accent-primary); margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">Clash for Windows 下载与教程</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li class="active"><a href="/download/">下载中心</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li><a href="/tutorial/">使用教程</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">Clash for Windows 下载和配置教程</h1>
+    </header>
+
+    <article class="article-content">
+      <p>Clash for Windows 是经典可靠的 Windows 代理客户端，久经考验，稳定安全。</p>
+
+      <div class="notice">
+        <p><strong>注意：</strong> 下载时如果遇到安全提示，请点击"保存"-"仍要下载"，安装时如果遇到拦截，请点击"显示详细信息"-"仍要运行"。</p>
+      </div>
+
+      <h2>下载地址</h2>
+      <table class="table">
+        <thead><tr><th>版本</th><th>下载</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Windows (稳定版)</strong></td>
+            <td>
+              <a href="https://github.clash.download/clash-download/Clash-for-Windows/releases/download/v0.20.39/clash-for-windows.exe" class="btn btn-primary" target="_blank">Github 加速下载</a>
+              <a href="https://github.com/clash-download/Clash-for-Windows/releases/download/v0.20.39/clash-for-windows.exe" class="btn btn-primary" target="_blank">官方下载</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>配置教程</h2>
+      <div class="step-section">
+        <h3>第一步：下载安装</h3>
+        <p>下载上面的版本，安装并启动 Clash for Windows。</p>
+      </div>
+      <div class="step-section">
+        <h3>第二步：获取订阅</h3>
+        <p>如果您还没有订阅链接，<a href="/jichang/">请查看机场推荐</a>获取。</p>
+      </div>
+      <div class="step-section">
+        <h3>第三步：导入配置</h3>
+        <p>复制订阅链接，在 Clash for Windows 中粘贴订阅地址，下载并应用配置。</p>
+      </div>
+      <div class="step-section">
+        <h3>第四步：开启代理</h3>
+        <p>在系统托盘或主界面开启系统代理开关。</p>
+      </div>
+
+      <div class="notice-light">
+        <p><strong>提示：</strong>如果遇到问题，请查看常见问题解答，99%+情况都能顺利联网！</p>
+      </div>
+
+      <h2>常见问题</h2>
+      <div class="faq-item">
+        <h4>Clash for Windows 还更新吗？</h4>
+        <p>官方版本已停止更新，但依然安全可靠。如果需要最新功能，可以考虑 <a href="/download/clash-verge/">Clash Verge</a> 或 <a href="/download/flclash/">FlClash</a>。</p>
+      </div>
+
+      <div id="waline"></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+<script>
+Waline.init({ el: '#waline', serverURL: 'https://clashvpn.shop/', path: window.location.pathname });
+</script>
+</body>
 </html>

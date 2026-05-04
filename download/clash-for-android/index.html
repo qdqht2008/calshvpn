@@ -1,145 +1,95 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Clash for Android 下载与配置指南 | Clash下载站</title>
-    <meta name="description" content="获取 Clash for Android (CFA) GitHub 经典稳定版 APK 下载。提供详细的配置教程和免费节点分享，助您在安卓设备上访问外部网络。">
-    <meta name="generator" content="VitePress v2.0.0-alpha.17">
-    <link rel="preload stylesheet" href="/assets/style.CY5lGvIn.css" as="style">
-    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
-    
-    <script type="module" src="/assets/app.CfAv_sFb.js"></script>
-    <link rel="preload" href="/assets/inter-roman-latin.Cy4MYw_J.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="modulepreload" href="/assets/chunks/theme.DKadbjZy.js">
-    <link rel="modulepreload" href="/assets/chunks/framework.Dpc0wyhY.js">
-    <link rel="modulepreload" href="/assets/clash-for-android.md.ChOE8hKU.lean.js">
-    <link rel="icon" href="/favicon.png">
-    <script>(function(){var a="clash.download",o=window.location.hostname;o!==a&&o!=="localhost"&&o!=="127.0.0.1"&&window.location.replace("https://"+a+window.location.pathname+window.location.search)})();</script>
-    <meta name="keywords" content="Clash for Android, CFA, 安卓Clash">
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8P50ZDTPVP");</script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8P50ZDTPVP"></script>
-    <script>(function(e,r,t,i,m,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=r.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+m,s=r.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","uldrsffmfu");</script>
-    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
-    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
-    <link rel="canonical" href="https://clash.download/clash-for-android">
-    <script type="application/ld+json" innerHTML="{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;WebPage&quot;,
-  &quot;name&quot;: &quot;Clash for Android 下载与教程&quot;,
-  &quot;url&quot;: &quot;https://clash.download/clash-for-android&quot;,
-  &quot;image&quot;: &quot;https://image.clash.download/clash-for-android-使用教程.webp&quot;,
-  &quot;author&quot;: {
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;Clash.Download&quot;
-  },
-  &quot;publisher&quot;: {
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;Clash.Download&quot;,
-    &quot;logo&quot;: {
-      &quot;@type&quot;: &quot;ImageObject&quot;,
-      &quot;url&quot;: &quot;https://image.clash.download/clash-download.webp&quot;
-    }
-  }
-}
-"></script>
-    <meta property="og:image" content="https://image.clash.download/clash-for-android-使用教程.webp">
-    <meta name="twitter:image" content="https://image.clash.download/clash-for-android-使用教程.webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json" innerHTML="{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;FAQPage&quot;,
-  &quot;mainEntity&quot;: [
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;CFA 还在更新吗？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;不，原作者已停止更新 Clash for Android。v2.5.12 官方最后一个稳定版本。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;下载的这个 Clash for Android (CFA) 版本安全吗？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;若从本站提供的链接下载 Clash for Android APK，则软件本身是安全的。代理服务的安全性更多取决于您选择的 Clash 节点提供商。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;Clash for Android (CFA) 和 Clash Meta for Android (CMFA) 怎么选？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;Clash for Android (CFA)：它的优点是极致简洁，适合老设备或者安卓电视。\nClash Meta for Android (CMFA)：推荐给绝大多数用户。它基于新内核，支持更多 Clash 节点协议和高级功能，仍然在持续更新，并且它的操作界面也跟 CFA 完全一致，是无缝替代。&quot;
-      }
-    },
-    {
-      &quot;@type&quot;: &quot;Question&quot;,
-      &quot;name&quot;: &quot;Clash for Android (CFA) 支持哪些节点协议？&quot;,
-      &quot;acceptedAnswer&quot;: {
-        &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;支持 Clash 核心所支持的常见代理协议，如 Shadowsocks (SS), Vmess, Trojan 等。但如果是基于 Clash Meta 内核的新特性或协议的 Clash 节点，则可能无法完全兼容。&quot;
-      }
-    }
-  ]
-}
-"></script>
-    <script type="application/ld+json" innerHTML="{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;HowTo&quot;,
-  &quot;name&quot;: &quot;Clash for Android (CFA) 配置使用教程 (v2.5.12)&quot;,
-  &quot;description&quot;: &quot;本教程将指导您如何在安卓设备上下载、安装 Clash for Android (CFA v2.5.12)，导入节点订阅配置，并启动代理服务，访问外部网络。&quot;,
-  &quot;totalTime&quot;: &quot;PT5M&quot;,
-  &quot;estimatedCost&quot;: { &quot;@type&quot;: &quot;MonetaryAmount&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;value&quot;: &quot;0&quot; },
-  &quot;supply&quot;: [
-    { &quot;@type&quot;: &quot;HowToSupply&quot;, &quot;name&quot;: &quot;Clash for Android 软件 (APK v2.5.12)&quot; },
-    { &quot;@type&quot;: &quot;HowToSupply&quot;, &quot;name&quot;: &quot;Clash 节点订阅地址&quot; }
-  ],
-  &quot;tool&quot;: [
-    { &quot;@type&quot;: &quot;HowToTool&quot;, &quot;name&quot;: &quot;安卓手机或平板设备&quot; }
-  ],
-  &quot;step&quot;: [
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第一步：下载并安装 APK&quot;,
-      &quot;text&quot;: &quot;下载 Clash for Android (CFA) v2.5.12 APK 安装包后，在您的安卓设备上点击安装。安卓系统可能会提示您授权“安装未知来源的应用”，请允许。&quot;,
-      &quot;url&quot;: &quot;#第一步-下载-并安装-apk&quot;
-      // Image removed as Step 1 in the body does not have a corresponding image
-    },
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第二步：准备 Clash 节点订阅&quot;,
-      &quot;text&quot;: &quot;Clash for Android 需要导入节点才可以使用。如果您没有可用的 Clash 节点订阅连接，可以获取试用节点。已有订阅链接请复制备用。&quot;,
-      &quot;url&quot;: &quot;#第二步-准备-clash-节点订阅&quot;,
-      &quot;image&quot;: &quot;https://image.clash.download/clash-meta-for-android-教程.webp&quot;
-    },
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第三步：导入节点配置到 Clash for Android&quot;,
-      &quot;text&quot;: &quot;将获取到的 Clash 订阅链接导入到 Clash for Android 中。操作方式包括一键导入和手动从 URL 下载。&quot;,
-      &quot;url&quot;: &quot;#第三步-导入节点配置到-clash-for-android&quot;,
-      &quot;itemListElement&quot;: [
-        { &quot;@type&quot;: &quot;HowToDirection&quot;, &quot;name&quot;: &quot;一键导入&quot;, &quot;text&quot;: &quot;如果您的订阅服务商支持一键导入 Clash 订阅，点击相应按钮或链接，Clash for Android 通常会自动获取并加载配置文件。&quot;, &quot;image&quot;: &quot;https://image.clash.download/clash-meta-for-android-配置节点.webp&quot; },
-        { &quot;@type&quot;: &quot;HowToDirection&quot;, &quot;name&quot;: &quot;手动下载&quot;, &quot;text&quot;: &quot;复制您的 Clash 订阅链接。打开 Clash for Android，进入“配置”页面，点击右下角的“+”按钮，选择“从 URL 导入”。粘贴订阅链接，为配置文件命名，然后保存。CFA 将拉取配置文件，之后选中该配置文件使其生效。&quot;, &quot;image&quot;: &quot;https://image.clash.download/clash-meta-for-android-配置教程-导入节点.webp&quot; }
-      ]
-    },
-    {
-      &quot;@type&quot;: &quot;HowToStep&quot;,
-      &quot;name&quot;: &quot;第四步：启动代理服务&quot;,
-      &quot;text&quot;: &quot;点击 Clash for Android 的启动按钮。首次启动时，系统可能会请求 VPN 权限，请点击“确定”。当启动按钮变为“运行中”状态，表示代理服务已成功启动。&quot;,
-      &quot;url&quot;: &quot;#第四步-启动代理服务&quot;,
-      &quot;image&quot;: &quot;https://image.clash.download/clash-for-android-使用教程.webp&quot;,
-      &quot;result&quot;: &quot;成功启动代理服务后，您的安卓设备网络流量将通过 CFA 进行代理。可以尝试打开 Google 等网站进行测试。&quot;
-    }
-  ]
-}
-"></script>
-    <link rel="canonical" href="https://clash.download/clash-for-android">
-  </head>
-  <body>
-    <div id="app"><div class="Layout" data-v-c109192d><!--[--><!--]--><!--[--><span tabindex="-1" data-v-10d4d845></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-10d4d845>Skip to content</a><!--]--><!----><header class="VPNav" data-v-c109192d data-v-d5bf7c8e><div class="VPNavBar top" data-v-d5bf7c8e data-v-cc1d9f2e><div class="wrapper" data-v-cc1d9f2e><div class="container" data-v-cc1d9f2e><div class="title" data-v-cc1d9f2e><div class="VPNavBarTitle" data-v-cc1d9f2e data-v-d4488dd0><a class="title" href="/" data-v-d4488dd0><!--[--><!--]--><!--[--><img class="VPImage logo" src="/favicon.png" alt data-v-ab19afbb><!--]--><span data-v-d4488dd0>Clash下载站</span><!--[--><!--]--></a></div></div><div class="content" data-v-cc1d9f2e><div class="content-body" data-v-cc1d9f2e><!--[--><!--]--><div class="VPNavBarSearch search" data-v-cc1d9f2e data-v-bdd98725><!--[--><button type="button" class="VPNavBarSearchButton" aria-label="搜索文档" aria-keyshortcuts="/ control+k meta+k" data-v-bdd98725 data-v-69351052><span class="vpi-search" aria-hidden="true" data-v-69351052></span><span class="text" data-v-69351052>搜索文档</span><span class="keys" aria-hidden="true" data-v-69351052><kbd class="key-cmd" data-v-69351052>⌘</kbd><kbd class="key-ctrl" data-v-69351052>Ctrl</kbd><kbd data-v-69351052>K</kbd></span></button><!----><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-cc1d9f2e data-v-020be4db><span id="main-nav-aria-label" class="visually-hidden" data-v-020be4db> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/downloads" tabindex="0" data-v-020be4db data-v-727dd4ba><!--[--><span data-v-727dd4ba>Clash 下载中心</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>Windows 电脑</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-verge" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Verge</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-for-windows" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash for Windows</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup active" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>Android 安卓</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-meta-for-android" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Meta for Android</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link active" href="/clash-for-android" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash for Android</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>macOS 苹果电脑</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-verge" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Verge</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clashx" data-v-6e27a530><!--[--><span data-v-6e27a530>ClashX Pro</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-for-windows" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash for Windows</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>iOS 苹果手机</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link vp-external-link-icon" href="https://clashmi.com/download" target="_blank" rel="noreferrer" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Mi</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/potatso" data-v-6e27a530><!--[--><span data-v-6e27a530>Potatos</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-020be4db data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d8fae6e2><span class="text" data-v-d8fae6e2><!----><span data-v-d8fae6e2>Linux</span><span class="vpi-chevron-down text-icon" data-v-d8fae6e2></span></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><div class="items" data-v-fcd1d7a8><!--[--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/flclash" data-v-6e27a530><!--[--><span data-v-6e27a530>FlClash</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-fcd1d7a8 data-v-6e27a530><a class="VPLink link" href="/clash-verge" data-v-6e27a530><!--[--><span data-v-6e27a530>Clash Verge</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/jichang" tabindex="0" data-v-020be4db data-v-727dd4ba><!--[--><span data-v-727dd4ba>Clash 订阅推荐</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-cc1d9f2e data-v-3f90c1a5><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-3f90c1a5 data-v-be9742d9 data-v-b4ccac88><span class="check" data-v-b4ccac88><span class="icon" data-v-b4ccac88><!--[--><span class="vpi-sun sun" data-v-be9742d9></span><span class="vpi-moon moon" data-v-be9742d9></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-cc1d9f2e data-v-ef6192dc data-v-a1a7286e><!--[--><a class="VPSocialLink no-icon" href="https://github.com/clash-download/clash" aria-label="github" target="_blank" rel="me noopener nofollow" data-v-a1a7286e data-v-32d78712><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-cc1d9f2e data-v-2a0cad91 data-v-d8fae6e2><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-d8fae6e2><span class="vpi-more-horizontal icon" data-v-d8fae6e2></span></button><div class="menu" data-v-d8fae6e2><div class="VPMenu" data-v-d8fae6e2 data-v-fcd1d7a8><!----><!--[--><!--[--><!----><div class="group" data-v-2a0cad91><div class="item appearance" data-v-2a0cad91><p class="label" data-v-2a0cad91>Appearance</p><div class="appearance-action" data-v-2a0cad91><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-2a0cad91 data-v-be9742d9 data-v-b4ccac88><span class="check" data-v-b4ccac88><span class="icon" data-v-b4ccac88><!--[--><span class="vpi-sun sun" data-v-be9742d9></span><span class="vpi-moon moon" data-v-be9742d9></span><!--]--></span></span></button></div></div></div><div class="group" data-v-2a0cad91><div class="item social-links" data-v-2a0cad91><div class="VPSocialLinks social-links-list" data-v-2a0cad91 data-v-a1a7286e><!--[--><a class="VPSocialLink no-icon" href="https://github.com/clash-download/clash" aria-label="github" target="_blank" rel="me noopener nofollow" data-v-a1a7286e data-v-32d78712><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-cc1d9f2e data-v-6bee1efd><span class="container" data-v-6bee1efd><span class="top" data-v-6bee1efd></span><span class="middle" data-v-6bee1efd></span><span class="bottom" data-v-6bee1efd></span></span></button></div></div></div></div><div class="divider" data-v-cc1d9f2e><div class="divider-line" data-v-cc1d9f2e></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-c109192d data-v-73add737><div class="container" data-v-73add737><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-73add737 data-v-e28a51a6><button data-v-e28a51a6>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-c109192d data-v-529a4999><div class="VPDoc has-aside" data-v-529a4999 data-v-d668f7cc><!--[--><!--]--><div class="container" data-v-d668f7cc><div class="aside" data-v-d668f7cc><div class="aside-curtain" data-v-d668f7cc></div><div class="aside-container" data-v-d668f7cc><div class="aside-content" data-v-d668f7cc><div class="VPDocAside" data-v-d668f7cc data-v-cb998dce><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-cb998dce data-v-c8b19031><div class="content" data-v-c8b19031><div class="outline-marker" data-v-c8b19031></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-c8b19031>本页目录</div><ul class="VPDocOutlineItem root" data-v-c8b19031 data-v-63c57e50><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-cb998dce></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-d668f7cc><div class="content-container" data-v-d668f7cc><!--[--><!--]--><main class="main" data-v-d668f7cc><div style="position:relative;" class="vp-doc _clash-for-android" data-v-d668f7cc><div><h1 id="clash-for-android-下载与新手配置指南" tabindex="-1">Clash for Android 下载与新手配置指南 <a class="header-anchor" href="#clash-for-android-下载与新手配置指南" aria-label="Permalink to “Clash for Android 下载与新手配置指南”">​</a></h1><p>Clash for Android v2.5.12 是安卓手机经典代理软件在其 GitHub 仓库的最后一个稳定版本。您下载安装后，只需<a href="#clash节点">导入 Clash 订阅地址</a>，启动开关就能访问外部网络。</p><h2 id="download" tabindex="-1">下载地址 <a class="header-anchor" href="#download" aria-label="Permalink to “下载地址”">​</a></h2><p>如果您无法通过 <code>Github直连</code>下载，请使用 <code>Github加速</code>下载。</p><table tabindex="0"><thead><tr><th style="text-align:left;">系统</th><th style="text-align:center;">Github加速</th><th style="text-align:center;">Github直连</th></tr></thead><tbody><tr><td style="text-align:left;">Android</td><td style="text-align:center;"><a href="https://github.clash.download/clash-download/Clash-for-Android/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk" target="_blank" rel="noreferrer">推荐下载</a></td><td style="text-align:center;"><a href="https://github.com/clash-download/Clash-for-Android/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk" target="_blank" rel="noreferrer nofollow">下载</a></td></tr></tbody></table><h2 id="使用教程" tabindex="-1">使用教程 <a class="header-anchor" href="#使用教程" aria-label="Permalink to “使用教程”">​</a></h2><p>不知道 Clash for Android 怎么用的新手朋友们，本教程只需要你花5分钟，即可连上外网！</p><h3 id="第一步-下载-并安装-apk" tabindex="-1">第一步：下载 并安装 APK <a class="header-anchor" href="#第一步-下载-并安装-apk" aria-label="Permalink to “第一步：下载 并安装 APK”">​</a></h3><p>安卓系统可能会提示您授权<code>安装未知来源的应用</code>，请允许。</p><h3 id="clash节点" tabindex="-1">第二步：准备 Clash 节点订阅 <a class="header-anchor" href="#clash节点" aria-label="Permalink to “第二步：准备 Clash 节点订阅”">​</a></h3><p>软件需要导入节点才可以使用。如果您没有可用的 Clash 节点订阅连接，<a href="https://qiaomimi.cloud/#/register?code=clash" rel="sponsored nofollow" target="_blank">可点此获取试用节点</a>。已有订阅链接，请复制备用。</p><p><img src="https://image.clash.download/clash-meta-for-android-%E6%95%99%E7%A8%8B.webp" alt="clash-for-android-免费节点"></p><h3 id="第三步-导入节点配置到-clash-for-android" tabindex="-1">第三步：导入节点配置到 Clash for Android <a class="header-anchor" href="#第三步-导入节点配置到-clash-for-android" aria-label="Permalink to “第三步：导入节点配置到 Clash for Android”">​</a></h3><h4 id="一键导入" tabindex="-1">一键导入 <a class="header-anchor" href="#一键导入" aria-label="Permalink to “一键导入”">​</a></h4><p>如上图所示，点击<code>Clash 软件图标</code>，稍等几秒，即可一键导入配置文件，效果如下图所示:</p><p><img src="https://image.clash.download/clash-meta-for-android-%E9%85%8D%E7%BD%AE%E8%8A%82%E7%82%B9.webp" alt="clash-for-android-一键导入节点"></p><h4 id="手动下载" tabindex="-1">手动下载 <a class="header-anchor" href="#手动下载" aria-label="Permalink to “手动下载”">​</a></h4><p>遇到自动导入下载配置失败或无响应，您可先点击<code>首页</code>的<code>导入订阅</code>，再点击<code>复制订阅地址</code>，然后如下图所示步骤，下载配置文件。</p><p><img src="https://image.clash.download/clash-meta-for-android-%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B-%E5%AF%BC%E5%85%A5%E8%8A%82%E7%82%B9.webp" alt="clash-for-android-手动下载配置"></p><h3 id="第四步-启动代理服务" tabindex="-1">第四步：启动代理服务 <a class="header-anchor" href="#第四步-启动代理服务" aria-label="Permalink to “第四步：启动代理服务”">​</a></h3><p>首次启动，系统会请求权限，请点击<code>确定</code>。启动按钮变为<code>运行中</code>，表示代理已生效。</p><p><img src="https://image.clash.download/clash-for-android-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.webp" alt="clash-for-android-启动"></p><p>现在，您可以尝试访问 <a href="https://google.com" target="_blank" rel="noreferrer">Google</a> 等网站测试网络连通性。连不上也不要慌，您只需要仔细核对上述步骤和教程中的示意图是否一致，并<a href="/downloads#clash-faq">查看常见问题解答</a>，99%+情况都能顺利联网，加油！</p><h2 id="常见问题" tabindex="-1">常见问题 <a class="header-anchor" href="#常见问题" aria-label="Permalink to “常见问题”">​</a></h2><h3 id="cfa-还在更新吗" tabindex="-1">CFA 还在更新吗？ <a class="header-anchor" href="#cfa-还在更新吗" aria-label="Permalink to “CFA 还在更新吗？”">​</a></h3><p>不，原作者已停止更新 Clash for Android。v2.5.12 是官方最后一个稳定版本。</p><h3 id="下载的这个版本安全吗" tabindex="-1">下载的这个版本安全吗？ <a class="header-anchor" href="#下载的这个版本安全吗" aria-label="Permalink to “下载的这个版本安全吗？”">​</a></h3><p>若从本站提供的链接下载 Clash for Android APK，则软件本身是安全的。代理服务的安全性更多取决于您选择的 Clash 节点提供商。</p><h3 id="cfa-和-cmfa-怎么选" tabindex="-1">CFA 和 CMFA 怎么选？ <a class="header-anchor" href="#cfa-和-cmfa-怎么选" aria-label="Permalink to “CFA 和 CMFA 怎么选？”">​</a></h3><ul><li><strong>Clash for Android</strong>：它的优点是极致简洁，适合老设备或者安卓电视。</li><li><a href="/clash-meta-for-android"><strong>Clash Meta for Android</strong></a>：<strong>推荐给绝大多数用户</strong>。它基于新内核，支持更多 Clash 节点协议和高级功能，仍然在持续更新，并且它的操作界面也跟 CFA 完全一致，是无缝替代。</li></ul><h3 id="cfa-支持哪些节点协议" tabindex="-1">CFA 支持哪些节点协议？ <a class="header-anchor" href="#cfa-支持哪些节点协议" aria-label="Permalink to “CFA 支持哪些节点协议？”">​</a></h3><p>支持 Clash 核心所支持的常见代理协议，如 Shadowsocks (SS), Vmess, Trojan 等。但如果是基于 Clash Meta 内核的新特性或协议的 Clash 节点，则可能无法完全兼容。</p><h2 id="遇到问题" tabindex="-1">遇到问题? <a class="header-anchor" href="#遇到问题" aria-label="Permalink to “遇到问题?”">​</a></h2><p>若您在使用 Clash for Android 过程中遇到节点配置导入失败、无法连接等问题，可参考：</p><p>➡️ <a href="/downloads#clash-faq">Clash 通用问题 FAQ</a></p><p><img src="https://image.clash.download/favicon.png" alt="clash-for-android-logo"></p></div></div></main><footer class="VPDocFooter" data-v-d668f7cc data-v-1bcd8184><!--[--><!--]--><div class="edit-info" data-v-1bcd8184><!----><div class="last-updated" data-v-1bcd8184><p class="VPLastUpdated" data-v-1bcd8184 data-v-73dafb42>最后更新于: <time datetime="2025-12-14T11:56:33.000Z" data-v-73dafb42></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-c109192d data-v-5b9946f5><div class="container" data-v-5b9946f5><!----><p class="copyright" data-v-5b9946f5>版权所有 © 2024-2026 Clash下载站,保留所有权利。</p></div></footer><!--[--><!--]--></div></div>
-    <script>window.__VP_HASH_MAP__=JSON.parse("{\"clash-for-android.md\":\"ChOE8hKU\",\"clash-for-windows.md\":\"C0I6loKE\",\"clash-meta-for-android.md\":\"BCr5mHrZ\",\"clash-verge.md\":\"1ZO6qNrr\",\"clashx.md\":\"Bm8Kc3FJ\",\"downloads.md\":\"_0N0nCJ9\",\"flclash.md\":\"B2JOd-y1\",\"index.md\":\"YMalbyeu\",\"jichang.md\":\"BZ0l2yUQ\",\"potatso.md\":\"w3fRqO27\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"Clash下载站\",\"description\":\"提供Clash for Windows, ClashX (macOS),Clash for Android等各平台最新版Clash软件下载,以及详细的安装配置教程,免费节点和常见问题解答,帮助新手用户快速上手。\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":\"/favicon.png\",\"nav\":[{\"text\":\"Clash 下载中心\",\"link\":\"/downloads\"},{\"text\":\"Windows 电脑\",\"items\":[{\"text\":\"Clash Verge\",\"link\":\"/clash-verge\"},{\"text\":\"Clash for Windows\",\"link\":\"/clash-for-windows\"},{\"text\":\"FlClash\",\"link\":\"/flclash\"}]},{\"text\":\"Android 安卓\",\"items\":[{\"text\":\"Clash Meta for Android\",\"link\":\"/clash-meta-for-android\"},{\"text\":\"Clash for Android\",\"link\":\"/clash-for-android\"},{\"text\":\"FlClash\",\"link\":\"/flclash\"}]},{\"text\":\"macOS 苹果电脑\",\"items\":[{\"text\":\"Clash Verge\",\"link\":\"/clash-verge\"},{\"text\":\"FlClash\",\"link\":\"/flclash\"},{\"text\":\"ClashX Pro\",\"link\":\"/clashx\"},{\"text\":\"Clash for Windows\",\"link\":\"/clash-for-windows\"}]},{\"text\":\"iOS 苹果手机\",\"items\":[{\"text\":\"Clash Mi\",\"link\":\"https://clashmi.com/download\"},{\"text\":\"Potatos\",\"link\":\"/potatso\"}]},{\"text\":\"Linux\",\"items\":[{\"text\":\"FlClash\",\"link\":\"/flclash\"},{\"text\":\"Clash Verge\",\"link\":\"/clash-verge\"}]},{\"text\":\"Clash 订阅推荐\",\"link\":\"/jichang\"}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/clash-download/clash\"}],\"footer\":{\"copyright\":\"版权所有 © 2024-2026 Clash下载站,保留所有权利。\"},\"search\":{\"provider\":\"local\",\"options\":{\"translations\":{\"button\":{\"buttonText\":\"搜索文档\",\"buttonAriaLabel\":\"搜索文档\"},\"modal\":{\"noResultsText\":\"无法找到相关结果\",\"resetButtonTitle\":\"清除查询条件\",\"footer\":{\"selectText\":\"选择\",\"navigateText\":\"切换\"}}}}},\"docFooter\":{\"prev\":\"上一页\",\"next\":\"下一页\"},\"outline\":{\"label\":\"本页目录\",\"level\":[2,4]},\"lastUpdated\":{\"text\":\"最后更新于\",\"formatOptions\":{\"dateStyle\":\"short\",\"timeStyle\":\"medium\"}},\"notFound\":{\"title\":\"页面未找到\",\"quote\":\"我的朋友请不要慌，我们知道回家的路。\",\"linkText\":\"返回首页\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true,\"additionalConfig\":{}}");</script>
-    
-  </body>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clash for Android 下载与配置教程 | Clash节点</title>
+<meta name="description" content="Clash for Android 是经典的 Android 代理客户端。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/download/clash-for-android/">
+<meta property="og:title" content="Clash for Android 下载与配置教程">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
+<style>
+.step-section { margin: 30px 0; padding: 25px; background: var(--bg-secondary); border-radius: 16px; }
+.step-section h3 { color: var(--accent-tertiary); margin-bottom: 15px; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">Clash for Android 下载与教程</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li class="active"><a href="/download/">下载中心</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li><a href="/tutorial/">使用教程</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">Clash for Android 下载和配置教程</h1>
+    </header>
+
+    <article class="article-content">
+      <p>Clash for Android 是经典的 Android 代理客户端，安全可靠。</p>
+
+      <h2>下载地址</h2>
+      <table class="table">
+        <thead><tr><th>版本</th><th>下载</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Android APK</strong></td>
+            <td>
+              <a href="https://github.clash.download/clash-download/Clash-for-Android/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk" class="btn btn-primary" target="_blank">推荐下载</a>
+              <a href="https://github.com/clash-download/Clash-for-Android/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk" class="btn btn-primary" target="_blank">官方下载</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>配置教程</h2>
+      <div class="step-section">
+        <h3>第一步：安装</h3>
+        <p>下载 APK 文件，在手机上安装。需要在设置中允许安装未知来源应用。</p>
+      </div>
+      <div class="step-section">
+        <h3>第二步：导入订阅</h3>
+        <p>打开应用，添加订阅，粘贴订阅链接，下载配置。</p>
+      </div>
+      <div class="step-section">
+        <h3>第三步：启动</h3>
+        <p>选择节点，点击启动代理按钮。</p>
+      </div>
+
+      <div class="notice-light">
+        <p><strong>说明：</strong>Clash for Android 官方版本已停止更新。如需最新功能，建议使用 <a href="/download/clash-meta-for-android/">Clash Meta for Android</a>。</p>
+      </div>
+
+      <div id="waline"></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+<script>
+Waline.init({ el: '#waline', serverURL: 'https://clashvpn.shop/', path: window.location.pathname });
+</script>
+</body>
 </html>
