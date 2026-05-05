@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>使用教程 - Clash节点</title>
-<meta name="description" content="Clash 客户端使用教程，包括 SwitchyOmega 浏览器代理扩展配置教程。">
+<meta name="description" content="Clash 客户端使用教程，包括各平台客户端配置教程和 SwitchyOmega 浏览器代理扩展配置教程。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.clashvpn.shop/tutorial/">
 <meta property="og:title" content="使用教程 - Clash节点">
@@ -16,7 +16,7 @@
 <style>
 .tutorial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
   margin: 30px 0;
 }
@@ -34,18 +34,36 @@
 }
 .tutorial-card h3 {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 18px;
   color: var(--accent-tertiary);
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 .tutorial-card p {
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 16px;
 }
 .tutorial-card .icon {
-  font-size: 36px;
-  margin-bottom: 16px;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.tutorial-card .platform {
+  font-size: 11px;
+  color: var(--accent-primary);
+  background: rgba(224,122,95,0.1);
+  padding: 3px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.platform-section { margin: 40px 0; }
+.platform-section h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--accent-tertiary);
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 4px solid var(--accent-primary);
 }
 </style>
 </head>
@@ -75,17 +93,107 @@
       <p style="color: var(--text-secondary); margin-top: 10px;">详细的图文教程，帮助您快速掌握软件使用</p>
     </header>
 
-    <div class="tutorial-grid">
-      <div class="tutorial-card">
-        <div class="icon">🔗</div>
-        <h3>Proxy SwitchyOmega</h3>
-        <p>浏览器代理扩展，支持 Chrome 和 Firefox。可以控制哪些页面走直连，哪些走代理，节省流量并解决内网访问限制。</p>
-        <a href="/tutorial/switchyomega/" class="btn btn-primary">查看教程</a>
+    <div class="platform-section">
+      <h2>Windows 客户端教程</h2>
+      <div class="tutorial-grid">
+        <div class="tutorial-card">
+          <span class="platform">Windows</span>
+          <div class="icon">🛡️</div>
+          <h3>Clash Verge 教程</h3>
+          <p>详细介绍 Clash Verge 的下载安装、订阅导入、代理配置等完整流程。</p>
+          <a href="/download/clash-verge/" class="btn btn-primary">查看教程</a>
+        </div>
+        <div class="tutorial-card">
+          <span class="platform">Windows</span>
+          <div class="icon">📦</div>
+          <h3>Clash for Windows 教程</h3>
+          <p>经典客户端的配置教程，适合入门用户。</p>
+          <a href="/download/clash-for-windows/" class="btn btn-primary">查看教程</a>
+        </div>
+        <div class="tutorial-card">
+          <span class="platform">Windows / Mac / Linux</span>
+          <div class="icon">🔄</div>
+          <h3>FlClash 教程</h3>
+          <p>跨平台客户端的下载安装和配置教程。</p>
+          <a href="/download/flclash/" class="btn btn-primary">查看教程</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-section">
+      <h2>Android 客户端教程</h2>
+      <div class="tutorial-grid">
+        <div class="tutorial-card">
+          <span class="platform">Android</span>
+          <div class="icon">🤖</div>
+          <h3>Clash Meta for Android 教程</h3>
+          <p>功能强大的 Android 代理客户端配置教程。</p>
+          <a href="/download/clash-meta-for-android/" class="btn btn-primary">查看教程</a>
+        </div>
+        <div class="tutorial-card">
+          <span class="platform">Android</span>
+          <div class="icon">📱</div>
+          <h3>Clash for Android 教程</h3>
+          <p>经典 Android 客户端的配置教程。</p>
+          <a href="/download/clash-for-android/" class="btn btn-primary">查看教程</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-section">
+      <h2>macOS 客户端教程</h2>
+      <div class="tutorial-grid">
+        <div class="tutorial-card">
+          <span class="platform">macOS</span>
+          <div class="icon">🍎</div>
+          <h3>Clash Verge 教程 (Mac)</h3>
+          <p>Mac 版 Clash Verge 的下载安装和配置教程。</p>
+          <a href="/download/clash-verge/" class="btn btn-primary">查看教程</a>
+        </div>
+        <div class="tutorial-card">
+          <span class="platform">macOS</span>
+          <div class="icon">⚡</div>
+          <h3>ClashX Pro 教程</h3>
+          <p>经典 Mac 客户端的配置教程。</p>
+          <a href="/download/clashx/" class="btn btn-primary">查看教程</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-section">
+      <h2>iOS 客户端教程</h2>
+      <div class="tutorial-grid">
+        <div class="tutorial-card">
+          <span class="platform">iOS</span>
+          <div class="icon">🍎</div>
+          <h3>Potatso 教程</h3>
+          <p>iOS 代理客户端的配置教程。</p>
+          <a href="/download/potatso/" class="btn btn-primary">查看教程</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-section">
+      <h2>浏览器扩展教程</h2>
+      <div class="tutorial-grid">
+        <div class="tutorial-card">
+          <span class="platform">Chrome / Firefox</span>
+          <div class="icon">🔗</div>
+          <h3>Proxy SwitchyOmega 教程</h3>
+          <p>浏览器代理扩展使用教程，控制哪些页面走直连，节省代理流量。</p>
+          <a href="/tutorial/switchyomega/" class="btn btn-primary">查看教程</a>
+        </div>
       </div>
     </div>
 
     <div class="notice-light" style="margin-top: 40px;">
-      <p><strong>提示：</strong>每个客户端下载页面也包含对应的配置教程，可以在 <a href="/download/">下载中心</a> 查看。</p>
+      <p><strong>快速入门：</strong></p>
+      <ol style="margin: 10px 0; padding-left: 20px;">
+        <li>在下载中心下载对应的客户端</li>
+        <li>获取机场订阅链接（可查看机场推荐）</li>
+        <li>按照教程导入订阅并配置代理</li>
+        <li>开启系统代理，开始使用</li>
+      </ol>
     </div>
 
     <div id="waline"></div>
