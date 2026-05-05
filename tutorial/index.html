@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用教程 - Clash节点</title>
+<meta name="description" content="Clash 客户端使用教程，包括 SwitchyOmega 浏览器代理扩展配置教程。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/tutorial/">
+<meta property="og:title" content="使用教程 - Clash节点">
+<meta property="og:type" content="website">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
+<style>
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 30px 0;
+}
+.tutorial-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+.tutorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(224,122,95,0.12);
+  border-color: var(--accent-primary);
+}
+.tutorial-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--accent-tertiary);
+  margin: 0 0 12px;
+}
+.tutorial-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.tutorial-card .icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">使用教程</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/download/">下载中心</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li class="active"><a href="/tutorial/">使用教程</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">使用教程</h1>
+      <p style="color: var(--text-secondary); margin-top: 10px;">详细的图文教程，帮助您快速掌握软件使用</p>
+    </header>
+
+    <div class="tutorial-grid">
+      <div class="tutorial-card">
+        <div class="icon">🔗</div>
+        <h3>Proxy SwitchyOmega</h3>
+        <p>浏览器代理扩展，支持 Chrome 和 Firefox。可以控制哪些页面走直连，哪些走代理，节省流量并解决内网访问限制。</p>
+        <a href="/tutorial/switchyomega/" class="btn btn-primary">查看教程</a>
+      </div>
+    </div>
+
+    <div class="notice-light" style="margin-top: 40px;">
+      <p><strong>提示：</strong>每个客户端下载页面也包含对应的配置教程，可以在 <a href="/download/">下载中心</a> 查看。</p>
+    </div>
+
+    <div id="waline"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+<script>
+Waline.init({ el: '#waline', serverURL: 'https://clashvpn.shop/', path: window.location.pathname });
+</script>
+</body>
+</html>
