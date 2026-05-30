@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDFNZBNTH0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TDFNZBNTH0');
+</script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.clashvpn.shop/img/clash-300x300.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clash节点",
+  "url": "https://www.clashvpn.shop/",
+  "logo": "https://www.clashvpn.shop/img/logo.png"
+}
+</script>
+
+<title>机场线路怎么选？直连、中转、专线三段链路详解 - Clash节点</title>
+<meta name="description" content="直连、中转、专线机场有什么区别？三段链路帮你理解线路类型，电信/联通/移动三网用户如何选择机场，搞懂为什么贵的机场反而更划算。">
+<meta name="keywords" content="机场线路, 直连线路, 中转线路, 专线机场, IEPL, IPLC, 翻墙机场, 线路选择, Clash机场">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/tutorial/line-selection/">
+<meta property="og:title" content="机场线路怎么选？直连、中转、专线三段链路详解">
+<meta property="og:description" content="直连、中转、专线机场有什么区别？三段链路帮你理解线路类型，搞懂为什么贵的机场反而更划算。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.clashvpn.shop/tutorial/line-selection/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
+<style>
+.line-diagram {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.line-diagram .segment {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  gap: 12px;
+}
+.line-diagram .node {
+  background: var(--accent-primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.line-diagram .arrow {
+  color: var(--accent-secondary);
+  font-size: 20px;
+}
+.line-diagram .segment-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  width: 60px;
+}
+.comparison-table {
+  margin: 24px 0;
+  overflow-x: auto;
+}
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.comparison-table th, .comparison-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+.comparison-table th {
+  background: var(--accent-tertiary);
+  color: white;
+}
+.comparison-table tr:nth-child(even) {
+  background: var(--bg-secondary);
+}
+.notice-highlight {
+  background: linear-gradient(135deg, rgba(224,122,95,0.1), rgba(129,178,154,0.1));
+  border-left: 4px solid var(--accent-primary);
+  padding: 16px 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 20px 0;
+}
+.airport-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px 0;
+  transition: all 0.3s ease;
+}
+.airport-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 24px rgba(224,122,95,0.1);
+}
+.airport-card h4 {
+  color: var(--accent-tertiary);
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.airport-card .tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.tag-iepl { background: rgba(224,122,95,0.15); color: var(--accent-primary); }
+.tag-transit { background: rgba(129,178,154,0.15); color: var(--accent-secondary); }
+.tag-direct { background: rgba(61,64,91,0.15); color: var(--text-secondary); }
+.airport-card .price {
+  font-size: 14px;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin: 8px 0;
+}
+.section-box {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.section-box h3 {
+  color: var(--accent-tertiary);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-primary);
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.summary-card {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.summary-card .icon { font-size: 28px; margin-bottom: 10px; }
+.summary-card h4 { color: var(--accent-tertiary); margin-bottom: 8px; }
+.summary-card p { color: var(--text-secondary); font-size: 13px; margin: 0; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">机场线路选择教程</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li class="active"><a href="/tutorial/">使用教程</a></li>
+        <li><a href="/download/">下载中心</a></li>
+        <li><a href="/guide/avoid-traps/">避坑指南</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">机场线路怎么选？三段链路帮你搞懂</h1>
+      <p style="color: var(--text-secondary); margin-top: 10px;">直连、中转、专线一篇搞懂</p>
+    </header>
+
+    <article class="article-content">
+      <div class="notice-highlight">
+        <p><strong>核心问题：</strong>面对两个套餐，9.9元/月和59元/月，哪个更划算？价格差6倍，背后差异在哪里？</p>
+      </div>
+
+      <p>就像打车一样，机场线路有「拼车、快车、专车」之分。不懂其中区别，很容易花专车的钱坐到拼车。</p>
+
+      <h2>从你家到国外网站：三段链路</h2>
+      <p>数据从你家到国外网站，需要经过三段链路：</p>
+
+      <div class="line-diagram">
+        <div class="segment">
+          <span class="segment-label">段1</span>
+          <div class="node">你家宽带（电信/联通/移动）</div>
+          <span class="arrow">→</span>
+          <div class="node">国内入口服务器</div>
+        </div>
+        <div class="segment">
+          <span class="segment-label">段2（核心）</span>
+          <div class="node">国内入口 → 出国 → 海外落地节点</div>
+        </div>
+        <div class="segment">
+          <span class="segment-label">段3</span>
+          <div class="node">海外落地节点</div>
+          <span class="arrow">→</span>
+          <div class="node">目标网站</div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>段1：本地段</h3>
+        <p><code>你家宽带（电信/联通/移动）→ 国内入口服务器</code></p>
+        <p>取决于本地网络质量。本段不稳，后续再好也救不了。</p>
+      </div>
+
+      <div class="section-box">
+        <h3>段2：出境段（核心差异）</h3>
+        <p>这段决定了体验和成本，主要有两种方式：</p>
+        <ul>
+          <li><strong>走普通公网出口</strong>（直连/中转）</li>
+          <li><strong>走专线</strong>（IEPL/IPLC）</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3>段3：国外段</h3>
+        <p>从海外落地节点到目标网站，这段基本各家差不多。</p>
+      </div>
+
+      <h2>三大线路类型对比</h2>
+
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>对比维度</th>
+              <th>直连线路</th>
+              <th>公网中转</th>
+              <th>IEPL/IPLC 专线</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>典型路径</strong></td>
+              <td>本地 → 公网出口 → 海外节点</td>
+              <td>本地 → 中转机房 → 优化出口 → 海外节点</td>
+              <td>本地 → 中转入口 → 专线通道 → 海外节点</td>
+            </tr>
+            <tr>
+              <td><strong>成本级别</strong></td>
+              <td>低</td>
+              <td>中</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td><strong>高峰期稳定性</strong></td>
+              <td>差（容易拥堵、丢包）</td>
+              <td>中等到好</td>
+              <td>优秀（延迟稳定、抖动小）</td>
+            </tr>
+            <tr>
+              <td><strong>延迟/抖动</strong></td>
+              <td>波动大（20-200ms）</td>
+              <td>相对稳定（略有波动）</td>
+              <td>非常稳定（波动范围小）</td>
+            </tr>
+            <tr>
+              <td><strong>被封/限流风险</strong></td>
+              <td>高</td>
+              <td>中</td>
+              <td>低（不走公网出口）</td>
+            </tr>
+            <tr>
+              <td><strong>典型场景</strong></td>
+              <td>轻度使用、备用梯子</td>
+              <td>日常主力、看视频、办公</td>
+              <td>游戏、视频、跨境办公</td>
+            </tr>
+            <tr>
+              <td><strong>价格区间</strong></td>
+              <td>1-9.9 元/月</td>
+              <td>9.9-30 元/月</td>
+              <td>30-100+ 元/月</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>如何根据需求选择</h2>
+
+      <div class="section-box">
+        <h3>🎯 直连线路 - 轻度用户</h3>
+        <p>适合预算低、轻度使用（浏览网页、偶尔看视频）。价格便宜但高峰期容易卡顿。</p>
+        <div class="airport-card">
+          <h4>适合场景</h4>
+          <p style="color: var(--text-secondary); font-size: 13px;">备用线路、预算有限的入门用户、不追求稳定性的临时使用</p>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>🚀 公网中转 - 性价比之选</h3>
+        <p>性价比平衡，日常主力选择。看视频、办公两不误，是大多数用户的首选。</p>
+        <p style="margin-top: 12px;">推荐机场：</p>
+        <div class="airport-card">
+          <h4>肥猫云 (FatCatCloud)</h4>
+          <span class="tag tag-transit">中转线路</span>
+          <div class="price">Trojan 协议 | 多平台客户端支持</div>
+          <a href="/jichang/feimiaoyun/" class="btn btn-primary" style="margin-top: 10px;">查看详情</a>
+        </div>
+        <div class="airport-card">
+          <h4>TNT Cloud</h4>
+          <span class="tag tag-transit">中转线路</span>
+          <div class="price">新人特惠 85折 | 折扣码：TNT85</div>
+          <a href="/jichang/tnt/" class="btn btn-primary" style="margin-top: 10px;">查看详情</a>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>🔥 IEPL/IPLC 专线 - 企业级稳定</h3>
+        <p>延迟稳定、抖动小，高峰期依然流畅。适合游戏、直播、跨境办公等对稳定性要求高的场景。</p>
+        <p style="margin-top: 12px;">推荐专线机场：</p>
+        <div class="airport-card">
+          <h4>宇宙云 (YuZhou)</h4>
+          <span class="tag tag-iepl">IEPL/IPLC专线</span>
+          <div class="price">全场 8折 | 折扣码：YUZHOU553</div>
+          <a href="/jichang/yuzhouyun/" class="btn btn-primary" style="margin-top: 10px;">查看详情</a>
+        </div>
+        <div class="airport-card">
+          <h4>极连云 (JiLianYun)</h4>
+          <span class="tag tag-iepl">IPLC专线</span>
+          <div class="price">Reality 协议 | ChatGPT/Gemini 解锁</div>
+          <a href="/jichang/jilianyun/" class="btn btn-primary" style="margin-top: 10px;">查看详情</a>
+        </div>
+        <div class="airport-card">
+          <h4>飞鸟机场 (FlyingBird)</h4>
+          <span class="tag tag-iepl">IEPL/IPLC专线</span>
+          <div class="price">月/季/半年付 9折 | 年付 64折：year85</div>
+          <a href="/jichang/feiniaoyun/" class="btn btn-primary" style="margin-top: 10px;">查看详情</a>
+        </div>
+      </div>
+
+      <h2>总结</h2>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="icon">🚶</div>
+          <h4>直连</h4>
+          <p>最简单、最不稳。适合预算低、轻度用户。</p>
+        </div>
+        <div class="summary-card">
+          <div class="icon">🚄</div>
+          <h4>公网中转</h4>
+          <p>性价比平衡，多数用户首选。</p>
+        </div>
+        <div class="summary-card">
+          <div class="icon">🚇</div>
+          <h4>专线</h4>
+          <p>企业级稳定体验，价格最高。</p>
+        </div>
+      </div>
+
+      <div class="notice-highlight">
+        <p><strong>选择建议：</strong>如果你经常在高峰期使用（晚上8-11点），建议选择中转或专线机场。虽然贵一些，但体验稳定很多，花得值。</p>
+      </div>
+
+      <h2>相关教程</h2>
+      <ul>
+        <li><a href="/tutorial/switchyomega/">Proxy SwitchyOmega 教程 - 浏览器代理扩展使用技巧</a></li>
+        <li><a href="/download/">下载中心 - 获取各平台客户端</a></li>
+        <li><a href="/jichang/">机场推荐 - 查看更多机场选择</a></li>
+      </ul>
+
+      <div id="waline"></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+<script>
+Waline.init({
+  el: '#waline',
+  serverURL: 'https://waline-seven-theta-30.vercel.app',
+  path: window.location.pathname,
+  placeholder: '写下你的留言...',
+  requiredMeta: ['nick', 'comment'],
+  login: 'enable',
+});
+</script>
+</body>
+</html>
