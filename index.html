@@ -40,7 +40,6 @@ gtag('config', 'G-TDFNZBNTH0');
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css">
 <style>
 .hero-section {
   text-align: center;
@@ -283,7 +282,7 @@ gtag('config', 'G-TDFNZBNTH0');
     </article>
 
     <!-- Waline 评论区 -->
-    <div id="waline"></div>
+    <div class="giscus"></div>
   </div>
 </section>
 
@@ -295,16 +294,21 @@ gtag('config', 'G-TDFNZBNTH0');
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
-<script>
-Waline.init({
-  el: '#waline',
-  path: window.location.pathname,
-  serverURL: 'https://waline-seven-theta-30.vercel.app',
-  placeholder: '写下你的留言...',
-  requiredMeta: ['nick', 'comment'],
-  login: 'enable',
-});
+<script src="https://giscus.app/client.js"
+        data-repo="qdqht2008/calshvpn"
+        data-repo-id="R_kgDOSNBV3g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSNBV3s4C-KRW"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
 </script>
 </body>
 </html>
