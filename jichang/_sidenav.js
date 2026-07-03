@@ -3,7 +3,7 @@
 (function() {
   var sidenavHtml = '<ul class="site-nav site-navbar">' +
     '<li><a href="/">首页</a></li>' +
-    '<li><a href="/jichang/ny/">奈云</a></li>' +
+    '<li><a href="/jichang/yangfanyun/">奈云</a></li>' +
     '<li><a href="/jichang/yangfanyun/">扬帆云</a></li>' +
     '<li><a href="/jichang/yuzhouyun/">宇宙云</a></li>' +
     '<li><a href="/jichang/dageyun/">大哥云</a></li>' +
