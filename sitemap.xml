@@ -3,7 +3,7 @@
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
   <url>
     <loc>https://www.clashvpn.shop/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -52,6 +52,12 @@
   <url>
     <loc>https://www.clashvpn.shop/jichang/sy/</loc>
     <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clashvpn.shop/jichang/tidal/</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,44 +135,50 @@
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/clash-verge/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/clash-for-windows/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/flclash/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/clash-meta-for-android/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/clash-for-android/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/clashx/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clashvpn.shop/tutorial/potatso/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clashvpn.shop/tutorial/line-selection/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
