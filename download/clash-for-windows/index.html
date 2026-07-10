@@ -21,12 +21,70 @@ gtag('config', 'G-TDFNZBNTH0');
   "logo": "https://www.clashvpn.shop/img/logo.png"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Clash for Windows 还更新吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clash for Windows 官方版本已经停止更新，但旧版本仍可用于基础代理配置。如果需要长期维护和新功能，更建议选择 Clash Verge 或 FlClash。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Clash for Windows 现在还能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只要订阅链接有效、节点可用，并且系统代理正确开启，Clash for Windows 仍可正常使用。需要注意的是，停止更新的软件可能缺少新协议和后续兼容修复。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么下载或安装时会被 Windows 拦截？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Windows SmartScreen 或浏览器安全提示经常会拦截来自 GitHub 的可执行文件。请优先确认下载来源可信，再根据页面提示选择保存或仍要运行。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "导入订阅失败怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先确认订阅链接没有过期、空格或复制不完整。如果浏览器也打不开订阅链接，需要回到机场后台重新复制或重置订阅。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "节点 timeout 或代理无法上网怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先手动更新订阅，确认系统代理已开启，再切换全局模式和多个节点测试。如果仍然 timeout，继续排查网络环境、DNS、套餐状态和线路质量。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Clash for Windows 和 Clash Verge 选哪个？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "新用户更推荐 Clash Verge，因为它仍在维护并支持较新的功能。Clash for Windows 更适合已经熟悉旧界面、只需要基础代理功能的用户。"
+      }
+    }
+  ]
+}
+</script>
 
 <title>Clash for Windows 下载与配置教程 | Clash节点</title>
-<meta name="description" content="Clash for Windows 是经典的 Windows 代理客户端，提供详细配置教程。">
+<meta name="description" content="Clash for Windows 下载与配置教程，包含 Windows 安装、订阅导入、系统代理开启，以及停止更新、下载拦截、节点 timeout 等常见问题解答。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.clashvpn.shop/download/clash-for-windows">
 <meta property="og:title" content="Clash for Windows 下载与配置教程">
+<meta property="og:description" content="Clash for Windows 下载、配置和常见问题：订阅导入失败、节点 timeout、系统代理无法上网等排查入口。">
+<meta property="og:url" content="https://www.clashvpn.shop/download/clash-for-windows">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/main.css">
@@ -109,7 +167,32 @@ gtag('config', 'G-TDFNZBNTH0');
       <h2>常见问题</h2>
       <div class="faq-item">
         <h4>Clash for Windows 还更新吗？</h4>
-        <p>官方版本已停止更新，但依然安全可靠。如果需要最新功能，可以考虑 <a href="/download/clash-verge/">Clash Verge</a> 或 <a href="/download/flclash/">FlClash</a>。</p>
+        <p>Clash for Windows 官方版本已经停止更新，但旧版本仍可用于基础代理配置。如果需要长期维护和新功能，更建议选择 <a href="/download/clash-verge/">Clash Verge</a> 或 <a href="/download/flclash/">FlClash</a>。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Clash for Windows 现在还能用吗？</h4>
+        <p>只要订阅链接有效、节点可用，并且系统代理正确开启，Clash for Windows 仍可正常使用。需要注意的是，停止更新的软件可能缺少新协议和后续兼容修复。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>为什么下载或安装时会被 Windows 拦截？</h4>
+        <p>Windows SmartScreen 或浏览器安全提示经常会拦截来自 GitHub 的可执行文件。请优先确认下载来源可信，再根据页面提示选择保存或仍要运行。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>导入订阅失败怎么办？</h4>
+        <p>先确认订阅链接没有过期、空格或复制不完整。如果浏览器也打不开订阅链接，需要回到机场后台重新复制或重置订阅。也可以参考 <a href="/tutorial/clash-verge-import-failed">订阅导入失败排查教程</a>。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>节点 timeout 或代理无法上网怎么办？</h4>
+        <p>先手动更新订阅，确认系统代理已开启，再切换全局模式和多个节点测试。如果仍然 timeout，继续排查网络环境、DNS、套餐状态和线路质量。详细步骤见 <a href="/tutorial/clash-node-connection-fix">Clash 节点连接排查教程</a>。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Clash for Windows 和 Clash Verge 选哪个？</h4>
+        <p>新用户更推荐 Clash Verge，因为它仍在维护并支持较新的功能。Clash for Windows 更适合已经熟悉旧界面、只需要基础代理功能的用户。</p>
       </div>
 
       <div class="giscus"></div>
