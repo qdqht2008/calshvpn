@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDFNZBNTH0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TDFNZBNTH0');
+</script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.clashvpn.shop/img/clash-300x300.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clash节点",
+  "url": "https://www.clashvpn.shop/",
+  "logo": "https://www.clashvpn.shop/img/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.clashvpn.shop/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使用教程",
+      "item": "https://www.clashvpn.shop/tutorial"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Clash 节点连接排查",
+      "item": "https://www.clashvpn.shop/tutorial/clash-node-connection-fix"
+    }
+  ]
+}
+</script>
+<title>Clash 节点连不上、延迟高怎么办？代理无法上网排查教程 | Clash节点</title>
+<meta name="description" content="Clash 节点连不上、延迟高、timeout、代理开启后无法上网怎么办？从订阅、模式、系统代理、DNS、线路质量逐步排查。">
+<meta name="keywords" content="Clash 节点连不上, Clash 延迟高, Clash 无法上网, Clash timeout, Clash 代理失败">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/tutorial/clash-node-connection-fix">
+<meta property="og:title" content="Clash 节点连不上、延迟高怎么办？">
+<meta property="og:description" content="从订阅、模式、系统代理、DNS、线路质量逐步排查 Clash 代理无法上网。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.clashvpn.shop/tutorial/clash-node-connection-fix">
+<meta property="og:site_name" content="Clash节点">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clash 节点连不上、延迟高怎么办？">
+<meta name="twitter:description" content="Clash 代理无法上网、节点 timeout、延迟高的排查顺序。">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">Clash 节点连接排查</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li class="active"><a href="/tutorial/">使用教程</a></li>
+        <li><a href="/download/">下载中心</a></li>
+        <li><a href="/guide/avoid-traps/">避坑指南</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">Clash 节点连不上、延迟高怎么办？</h1>
+      <p style="color: var(--text-secondary); margin-top: 10px;">代理无法上网、节点 timeout、测速全红的排查顺序</p>
+    </header>
+
+    <article class="article-content">
+      <div class="notice-light">
+        <p><strong>排查原则：</strong>先排除本机设置，再判断订阅和节点质量。不要一上来就重装客户端，很多问题只是系统代理、规则模式或 DNS 没开对。</p>
+      </div>
+
+      <h2>一、先确认订阅是否更新成功</h2>
+      <p>如果订阅没有更新成功，节点列表可能是旧的，甚至全是失效节点。先进入客户端订阅页面，手动更新一次订阅。</p>
+      <ul>
+        <li>更新失败：先看 <a href="/tutorial/clash-verge-import-failed/">Clash Verge 导入订阅失败排查</a>。</li>
+        <li>更新成功但节点全红：继续检查节点和线路。</li>
+        <li>节点突然全部不可用：确认机场后台套餐是否过期或流量用尽。</li>
+      </ul>
+
+      <h2>二、检查代理模式和系统代理</h2>
+      <p>Clash 客户端通常需要同时满足两个条件：选择了可用节点，并开启系统代理。如果只选了节点但没有打开系统代理，浏览器仍可能直连。</p>
+      <ol>
+        <li>模式先选“规则”或“全局”测试。</li>
+        <li>打开系统代理开关。</li>
+        <li>选择一个香港、日本、新加坡或美国节点。</li>
+        <li>打开浏览器测试常用网站。</li>
+      </ol>
+      <p>如果“全局”能用、“规则”不能用，问题可能在规则集；如果两者都不能用，继续排查节点和 DNS。</p>
+
+      <h2>三、节点延迟高不等于一定不可用</h2>
+      <p>客户端显示的延迟只是探测结果，不能完全代表实际体验。判断节点是否可用，建议同时看三个指标：</p>
+      <ul>
+        <li><strong>测速能否返回：</strong>全部 timeout 通常说明节点或本地网络有问题。</li>
+        <li><strong>网页能否打开：</strong>延迟高但网页能打开，可能只是探测地址不稳定。</li>
+        <li><strong>晚高峰是否波动：</strong>晚高峰卡顿明显，通常和线路质量有关。</li>
+      </ul>
+
+      <h2>四、DNS 和 TUN 模式问题</h2>
+      <p>如果浏览器能打开部分网站，但应用内无法联网，或域名解析异常，可以尝试关闭再开启 DNS/TUN 相关设置。不同客户端叫法不同，不建议同时开启多个代理软件。</p>
+      <div class="notice">
+        <p><strong>提示：</strong>公司、校园网或公共 Wi-Fi 可能限制代理连接。换手机热点测试一次，可以快速判断是不是当前网络环境问题。</p>
+      </div>
+
+      <h2>五、什么时候该换节点或换机场</h2>
+      <p>如果只有单个节点不可用，换同地区其他节点即可。如果全部节点长期 timeout，且订阅更新正常，多半是机场线路质量或套餐状态问题。购买前可以先看 <a href="/tutorial/line-selection/">机场线路怎么选</a> 和 <a href="/guide/avoid-traps/">机场避坑指南</a>。</p>
+
+      <h2>六、推荐排查顺序</h2>
+      <ol>
+        <li>手动更新订阅。</li>
+        <li>确认系统代理已开启。</li>
+        <li>切换全局模式测试。</li>
+        <li>换 3 个不同地区节点。</li>
+        <li>换手机热点测试。</li>
+        <li>确认机场后台套餐和流量状态。</li>
+      </ol>
+
+      <div class="notice">
+        <p><strong>继续阅读：</strong><a href="/download/clash-verge/">Clash Verge 下载与配置教程</a>，<a href="/jichang/">机场推荐</a>。</p>
+      </div>
+    </article>
+
+    <div class="giscus"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://giscus.app/client.js"
+        data-repo="qdqht2008/calshvpn"
+        data-repo-id="R_kgDOSNBV3g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSNBV3s4C-KRW"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

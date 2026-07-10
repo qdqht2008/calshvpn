@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDFNZBNTH0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TDFNZBNTH0');
+</script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.clashvpn.shop/img/clash-300x300.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clash节点",
+  "url": "https://www.clashvpn.shop/",
+  "logo": "https://www.clashvpn.shop/img/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.clashvpn.shop/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使用教程",
+      "item": "https://www.clashvpn.shop/tutorial"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Clash for Android 配置失败",
+      "item": "https://www.clashvpn.shop/tutorial/clash-for-android-fix"
+    }
+  ]
+}
+</script>
+<title>Clash for Android 配置失败怎么办？安卓代理无法连接排查 | Clash节点</title>
+<meta name="description" content="Clash for Android 配置失败、VPN 无法启动、导入订阅失败、安卓代理无法联网怎么办？按权限、订阅、系统设置、省电限制排查。">
+<meta name="keywords" content="Clash for Android 配置失败, Clash for Android 无法连接, 安卓 Clash 订阅失败, Android 代理无法上网">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/tutorial/clash-for-android-fix">
+<meta property="og:title" content="Clash for Android 配置失败怎么办？">
+<meta property="og:description" content="安卓代理无法连接、VPN 无法启动、订阅导入失败的排查步骤。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.clashvpn.shop/tutorial/clash-for-android-fix">
+<meta property="og:site_name" content="Clash节点">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clash for Android 配置失败怎么办？">
+<meta name="twitter:description" content="按权限、订阅、系统设置、省电限制排查 Android 代理问题。">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">Android 代理排查</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li class="active"><a href="/tutorial/">使用教程</a></li>
+        <li><a href="/download/">下载中心</a></li>
+        <li><a href="/guide/avoid-traps/">避坑指南</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">Clash for Android 配置失败怎么办？</h1>
+      <p style="color: var(--text-secondary); margin-top: 10px;">VPN 无法启动、订阅导入失败、安卓代理无法联网的排查方法</p>
+    </header>
+
+    <article class="article-content">
+      <div class="notice-light">
+        <p><strong>先分清问题：</strong>如果是导入订阅失败，看订阅链接；如果是 VPN 启动失败，看系统权限；如果是开启后无法联网，再看节点、模式和省电限制。</p>
+      </div>
+
+      <h2>一、确认安装的是可用版本</h2>
+      <p>Android 端常见客户端有 Clash for Android 和 Clash Meta for Android。不同版本界面略有差异，但核心步骤都是导入订阅、选择节点、启动 VPN。</p>
+      <p>还没安装客户端的用户，可以先看 <a href="/download/clash-for-android/">Clash for Android 下载教程</a> 或 <a href="/download/clash-meta-for-android/">Clash Meta for Android 下载教程</a>。</p>
+
+      <h2>二、导入订阅失败</h2>
+      <p>在手机上复制订阅链接时，最容易多复制空格或少复制一段参数。建议先把订阅链接发到浏览器打开测试：</p>
+      <ul>
+        <li>浏览器能下载配置：链接大概率有效。</li>
+        <li>浏览器提示无权限或过期：回机场后台重新复制订阅。</li>
+        <li>浏览器打不开：换网络或联系机场客服。</li>
+      </ul>
+      <p>如果电脑端也导入失败，可以参考 <a href="/tutorial/clash-verge-import-failed/">Clash Verge 导入订阅失败排查</a>，判断是不是订阅本身的问题。</p>
+
+      <h2>三、VPN 无法启动或一启动就断开</h2>
+      <p>Android 代理客户端通常需要系统 VPN 权限。如果第一次启动时拒绝了权限，可以到系统设置里清除默认 VPN 或重新授权。</p>
+      <ol>
+        <li>关闭其他 VPN 或代理软件。</li>
+        <li>重新打开 Clash for Android。</li>
+        <li>点击启动，允许系统 VPN 权限。</li>
+        <li>如果仍失败，重启手机再试一次。</li>
+      </ol>
+
+      <h2>四、开启后无法联网</h2>
+      <p>开启成功但网页打不开，按下面顺序排查：</p>
+      <ul>
+        <li><strong>换节点：</strong>优先测试香港、日本、新加坡、美国等常见节点。</li>
+        <li><strong>切换模式：</strong>先用全局模式测试，再回到规则模式。</li>
+        <li><strong>关闭省电限制：</strong>部分手机会后台杀掉代理进程。</li>
+        <li><strong>换网络：</strong>Wi-Fi 和移动数据各试一次。</li>
+      </ul>
+      <p>如果所有节点都 timeout，继续看 <a href="/tutorial/clash-node-connection-fix/">Clash 节点连不上排查教程</a>。</p>
+
+      <h2>五、MIUI、ColorOS 等系统的额外限制</h2>
+      <p>部分国产 Android 系统会限制后台联网、VPN 常驻和自启动。可以把 Clash 客户端加入后台保护或电池优化白名单，避免锁屏后断开。</p>
+
+      <h2>六、机场线路也会影响手机体验</h2>
+      <p>手机网络波动比宽带更明显。晚高峰移动数据经常卡顿时，优先选择中转或专线节点。线路差异可以参考 <a href="/tutorial/line-selection/">机场线路怎么选</a>，购买前也建议阅读 <a href="/guide/avoid-traps/">机场避坑指南</a>。</p>
+
+      <div class="notice">
+        <p><strong>相关入口：</strong><a href="/jichang/">机场推荐</a>，<a href="/download/">客户端下载中心</a>。</p>
+      </div>
+    </article>
+
+    <div class="giscus"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://giscus.app/client.js"
+        data-repo="qdqht2008/calshvpn"
+        data-repo-id="R_kgDOSNBV3g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSNBV3s4C-KRW"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

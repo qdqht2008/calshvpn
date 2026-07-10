@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDFNZBNTH0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TDFNZBNTH0');
+</script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.clashvpn.shop/img/clash-300x300.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clash节点",
+  "url": "https://www.clashvpn.shop/",
+  "logo": "https://www.clashvpn.shop/img/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.clashvpn.shop/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使用教程",
+      "item": "https://www.clashvpn.shop/tutorial"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Clash Verge 导入订阅失败",
+      "item": "https://www.clashvpn.shop/tutorial/clash-verge-import-failed"
+    }
+  ]
+}
+</script>
+<title>Clash Verge 导入订阅失败怎么办？订阅链接无效排查教程 | Clash节点</title>
+<meta name="description" content="Clash Verge 导入订阅失败、订阅链接无效、下载配置失败怎么办？按链接、网络、客户端、机场订阅四个方向排查，快速定位问题。">
+<meta name="keywords" content="Clash Verge 导入订阅失败, Clash Verge 订阅链接无效, Clash Verge 下载配置失败, Clash Verge 教程">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/tutorial/clash-verge-import-failed">
+<meta property="og:title" content="Clash Verge 导入订阅失败怎么办？">
+<meta property="og:description" content="订阅链接无效、下载配置失败、导入后没有节点的常见原因和排查步骤。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.clashvpn.shop/tutorial/clash-verge-import-failed">
+<meta property="og:site_name" content="Clash节点">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clash Verge 导入订阅失败怎么办？">
+<meta name="twitter:description" content="按链接、网络、客户端、机场订阅四个方向排查 Clash Verge 导入失败。">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">Clash Verge 故障排查</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li class="active"><a href="/tutorial/">使用教程</a></li>
+        <li><a href="/download/">下载中心</a></li>
+        <li><a href="/guide/avoid-traps/">避坑指南</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">Clash Verge 导入订阅失败怎么办？</h1>
+      <p style="color: var(--text-secondary); margin-top: 10px;">订阅链接无效、下载配置失败、导入后没有节点的排查顺序</p>
+    </header>
+
+    <article class="article-content">
+      <div class="notice-light">
+        <p><strong>先判断问题在哪一层：</strong>链接打不开，多半是订阅地址或网络问题；链接能打开但导入失败，多半是客户端解析或配置格式问题；导入成功但节点不可用，则继续看 <a href="/tutorial/clash-node-connection-fix/">节点连接排查教程</a>。</p>
+      </div>
+
+      <h2>一、确认订阅链接本身是否有效</h2>
+      <p>把机场后台复制出来的订阅链接粘贴到浏览器地址栏。如果浏览器直接下载一个配置文件，说明链接基本有效；如果提示 404、过期、无权限或空白页面，需要回到机场后台重新复制订阅。</p>
+      <ul>
+        <li>不要复制页面上的说明文字，只复制完整订阅 URL。</li>
+        <li>确认链接没有多出空格、换行或中文标点。</li>
+        <li>如果机场后台有“重置订阅”按钮，重置后旧链接通常会失效。</li>
+      </ul>
+
+      <h2>二、检查 Clash Verge 的导入方式</h2>
+      <p>Clash Verge 常见导入方式是“订阅”或“配置文件”。如果你拿到的是订阅链接，应选择订阅导入；如果你下载到本地的是 YAML 文件，再选择本地配置文件导入。</p>
+      <ol>
+        <li>打开 Clash Verge。</li>
+        <li>进入订阅或 Profiles 页面。</li>
+        <li>新增订阅，粘贴完整订阅链接。</li>
+        <li>保存后手动更新一次订阅。</li>
+      </ol>
+      <p>如果你还没有完成安装，可以先看 <a href="/download/clash-verge/">Clash Verge 下载与配置教程</a>。</p>
+
+      <h2>三、处理“下载配置失败”</h2>
+      <p>下载配置失败通常表示 Clash Verge 访问订阅链接时失败。可以按下面顺序排查：</p>
+      <ul>
+        <li><strong>换网络：</strong>手机热点和家宽各试一次，排除当前网络拦截。</li>
+        <li><strong>关闭代理后重试：</strong>错误代理可能导致订阅更新请求走错路径。</li>
+        <li><strong>更新客户端：</strong>旧版本可能无法兼容部分订阅格式。</li>
+        <li><strong>联系机场客服：</strong>如果浏览器也打不开订阅，多半需要机场侧处理。</li>
+      </ul>
+
+      <h2>四、导入成功但没有节点</h2>
+      <p>导入后列表为空，常见原因是订阅套餐过期、流量用尽、订阅格式异常，或机场只返回了空配置。此时不要反复重装客户端，优先到机场后台确认套餐状态。</p>
+
+      <h2>五、什么时候需要换机场</h2>
+      <p>如果订阅经常失效、客服不回应、节点长期无法更新，问题可能不在客户端。可以查看 <a href="/guide/avoid-traps/">机场避坑指南</a>，再对比 <a href="/jichang/">机场推荐</a> 页面里的服务类型和线路说明。</p>
+
+      <div class="notice">
+        <p><strong>相关教程：</strong><a href="/tutorial/clash-node-connection-fix/">Clash 节点连不上/延迟高排查</a>，<a href="/tutorial/clash-for-android-fix/">Clash for Android 配置失败排查</a>。</p>
+      </div>
+    </article>
+
+    <div class="giscus"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://giscus.app/client.js"
+        data-repo="qdqht2008/calshvpn"
+        data-repo-id="R_kgDOSNBV3g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSNBV3s4C-KRW"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
