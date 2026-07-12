@@ -76,14 +76,14 @@ body::before {
 
 .logo a {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 0;
   font-weight: 400;
   color: var(--accent-tertiary);
   text-decoration: none;
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0;
   transition: all 0.3s ease;
 }
 
@@ -93,8 +93,10 @@ body::before {
 }
 
 .logo img {
-  height: 45px;
+  width: 150px;
+  height: auto;
   border-radius: 8px;
+  display: block;
 }
 
 .brand {
@@ -504,7 +506,11 @@ body::before {
   }
 
   .logo a {
-    font-size: 22px;
+    font-size: 0;
+  }
+
+  .logo img {
+    width: 140px;
   }
 
   .site-navbar li a {
