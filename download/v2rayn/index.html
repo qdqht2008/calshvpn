@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDFNZBNTH0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TDFNZBNTH0');
+</script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.clashvpn.shop/img/clash-300x300.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.clashvpn.shop/"},
+    {"@type": "ListItem", "position": 2, "name": "下载中心", "item": "https://www.clashvpn.shop/download"},
+    {"@type": "ListItem", "position": 3, "name": "v2rayN 下载与教程", "item": "https://www.clashvpn.shop/download/v2rayn"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "v2rayN 只有 Windows 版吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "不是。v2rayN 官方项目同时提供 Windows、macOS 和 Linux 构建，但中文用户最常使用的是 Windows 版。"}
+    },
+    {
+      "@type": "Question",
+      "name": "v2rayN 应该下载哪个文件？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先确认操作系统和处理器架构。Windows 普通电脑通常选择 64 位构建，ARM 设备选择 ARM64；不确定时应查看官方发布文件说明。"}
+    },
+    {
+      "@type": "Question",
+      "name": "v2rayN 怎么导入订阅？",
+      "acceptedAnswer": {"@type": "Answer", "text": "在订阅分组设置中添加完整订阅地址，保存后更新订阅，再选择可用节点。不同版本的菜单名称可能略有差异。"}
+    },
+    {
+      "@type": "Question",
+      "name": "v2rayN 开启后为什么浏览器不能上网？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先确认已选择可用节点，再检查系统代理是否开启。仍无法连接时，依次检查订阅状态、节点、路由模式、DNS 和当前网络。"}
+    },
+    {
+      "@type": "Question",
+      "name": "v2rayN 更新后无法启动怎么办？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先查看官方发布说明和运行环境要求，并备份配置。若新版无法启动，可从官方 Releases 页面重新下载与系统架构匹配的完整文件。"}
+    }
+  ]
+}
+</script>
+<title>v2rayN 下载与使用教程 | Windows 11、macOS、Linux</title>
+<meta name="description" content="v2rayN 官方下载与使用教程，介绍 Windows 11、macOS、Linux 版本选择、订阅导入、系统代理开启和无法连接排查。">
+<meta name="keywords" content="v2rayN 下载, v2rayN 使用教程, v2rayN Windows 11, v2rayN 订阅导入, v2rayN 系统代理">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clashvpn.shop/download/v2rayn">
+<meta property="og:title" content="v2rayN 下载与使用教程">
+<meta property="og:description" content="v2rayN 官方版本选择、订阅导入、系统代理与连接排查教程。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.clashvpn.shop/download/v2rayn">
+<meta property="og:site_name" content="Clash节点">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="v2rayN 下载与使用教程">
+<meta name="twitter:description" content="Windows、macOS、Linux 的 v2rayN 官方下载与配置说明。">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.step-section { margin: 30px 0; padding: 25px; background: var(--bg-secondary); border-radius: 16px; }
+.step-section h3 { color: var(--accent-tertiary); margin-bottom: 15px; }
+.faq-item { margin: 20px 0; padding: 20px; background: var(--gradient-glow); border-radius: 12px; }
+.faq-item h4 { color: var(--accent-primary); margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="/img/logo.png" alt="Clash节点">Clash节点</a></div>
+    <div class="brand">v2rayN 下载与教程</div>
+  </div>
+</header>
+
+<section class="container container-page">
+  <div class="pageside">
+    <div class="pagemenus">
+      <ul class="site-nav site-navbar">
+        <li><a href="/">首页</a></li>
+        <li><a href="/jichang/">机场推荐</a></li>
+        <li><a href="/tutorial/">使用教程</a></li>
+        <li class="active"><a href="/download/">下载中心</a></li>
+        <li><a href="/guide/avoid-traps/">避坑指南</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="article-header">
+      <h1 class="article-title">v2rayN 下载和使用教程</h1>
+      <p style="color: var(--text-secondary); margin-top: 10px;">Windows 11、macOS、Linux 版本选择与订阅配置</p>
+    </header>
+
+    <article class="article-content">
+      <p><strong>v2rayN</strong> 是开源桌面代理客户端，官方项目支持 Windows、macOS 和 Linux，并可调用 Xray、sing-box 等内核。客户端本身不提供节点，使用前需要准备有效的服务器配置或订阅地址。</p>
+
+      <div class="notice">
+        <p><strong>下载原则：</strong>只从 2dust/v2rayN 官方 GitHub 项目获取程序。发布文件会随版本变化，本页不固定某个版本或安装包。</p>
+      </div>
+
+      <h2>v2rayN 官方下载</h2>
+      <table class="table">
+        <thead><tr><th>用途</th><th>官方入口</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>查看并下载当前发布版本</strong></td>
+            <td><a href="https://github.com/2dust/v2rayN/releases" class="btn btn-primary" target="_blank">GitHub Releases</a></td>
+          </tr>
+          <tr>
+            <td><strong>确认不同系统与架构文件</strong></td>
+            <td><a href="https://github.com/2dust/v2rayN/wiki/Release-files-introduction" class="btn btn-primary" target="_blank">发布文件说明</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Windows 11、macOS、Linux 怎么选</h2>
+      <ul>
+        <li><strong>Windows：</strong>普通 Intel/AMD 电脑通常选择 64 位构建；Windows on ARM 设备选择 ARM64。</li>
+        <li><strong>macOS：</strong>先区分 Apple Silicon 与 Intel 处理器，再按官方文件名选择。</li>
+        <li><strong>Linux：</strong>按发行版和架构选择 deb、rpm 或压缩包，并查看官方发布说明中的依赖要求。</li>
+      </ul>
+
+      <h2>v2rayN 配置教程</h2>
+      <div class="step-section">
+        <h3>第一步：下载并启动</h3>
+        <p>从官方 Releases 页面下载与系统和架构匹配的文件。Windows 压缩包需要先完整解压，再从解压目录启动程序。</p>
+      </div>
+      <div class="step-section">
+        <h3>第二步：添加订阅</h3>
+        <p>复制完整订阅地址，在订阅分组设置中新增订阅，保存后执行更新。不要把网页说明文字或换行一起复制进去。</p>
+      </div>
+      <div class="step-section">
+        <h3>第三步：选择节点</h3>
+        <p>订阅更新后选择一个可用节点，可先测试延迟，再将其设为当前服务器。</p>
+      </div>
+      <div class="step-section">
+        <h3>第四步：开启系统代理</h3>
+        <p>在 v2rayN 中开启系统代理，并选择适合当前需求的路由模式。不要同时开启多个会修改系统代理的客户端。</p>
+      </div>
+
+      <div class="notice-light">
+        <p><strong>无法使用？</strong>订阅能更新但节点 timeout、浏览器无法联网时，可按 <a href="/tutorial/clash-node-connection-fix/">节点与系统代理排查顺序</a>检查订阅、代理、DNS 和网络。</p>
+      </div>
+
+      <h2>v2rayN 常见问题</h2>
+      <div class="faq-item">
+        <h4>v2rayN 只有 Windows 版吗？</h4>
+        <p>不是。v2rayN 官方项目同时提供 Windows、macOS 和 Linux 构建，但中文用户最常使用的是 Windows 版。</p>
+      </div>
+      <div class="faq-item">
+        <h4>v2rayN 应该下载哪个文件？</h4>
+        <p>先确认操作系统和处理器架构。Windows 普通电脑通常选择 64 位构建，ARM 设备选择 ARM64；不确定时应查看官方发布文件说明。</p>
+      </div>
+      <div class="faq-item">
+        <h4>v2rayN 怎么导入订阅？</h4>
+        <p>在订阅分组设置中添加完整订阅地址，保存后更新订阅，再选择可用节点。不同版本的菜单名称可能略有差异。</p>
+      </div>
+      <div class="faq-item">
+        <h4>v2rayN 开启后为什么浏览器不能上网？</h4>
+        <p>先确认已选择可用节点，再检查系统代理是否开启。仍无法连接时，依次检查订阅状态、节点、路由模式、DNS 和当前网络。</p>
+      </div>
+      <div class="faq-item">
+        <h4>v2rayN 更新后无法启动怎么办？</h4>
+        <p>先查看官方发布说明和运行环境要求，并备份配置。若新版无法启动，可从官方 Releases 页面重新下载与系统架构匹配的完整文件。</p>
+      </div>
+
+      <div class="notice">
+        <p><strong>其他客户端：</strong>返回 <a href="/download/">客户端下载中心</a>，按平台比较 Clash Verge Rev、FlClash 和其他客户端。</p>
+      </div>
+
+      <div class="giscus"></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2024-2026 Clash节点. All rights reserved.</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://giscus.app/client.js"
+        data-repo="qdqht2008/calshvpn"
+        data-repo-id="R_kgDOSNBV3g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSNBV3s4C-KRW"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
